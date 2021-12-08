@@ -1,0 +1,186 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{Maths Resource} \rhead{Tutorial Sheet} \chead{Probability} %\input{tcilatex}
+
+\begin{document}
+\begin{enumerate}
+	\item I pick 3 cards from a pack of 52. Calculate the probability that 
+	i)	I pick exactly one spade
+	ii)	I pick at least one spade
+	iii)	I pick exactly one spade, given that I pick at least one spade.
+	
+\item The probability that a new born child is a boy is 0.51. Calculate the probability that in a family with 3 children
+	i)	there are two girls and one boy
+	ii)	all the children are boys, given that the eldest and the youngest child are of the same sex.
+	
+\item	A coin is thrown 4 times. Calculate 
+	i)	The probability of throwing 4 heads
+	ii)	The probability of throwing 3 heads 
+	iii)	The probability of throwing 3 heads, given that the result of the first roll is tails.
+	
+
+	\item A machine is composed of 3 components, which function independently of each other with probabilities p1, p2 and p3, respectively. Calculate the probability that the machine works when
+	a)	the machine only works when all the components are working
+	b)	the machine works when at least one of the components works.
+	
+	\item  A die is thrown twice. A is the event that the sum is 7. B is the event that the first die roll results in a 1. C is the event that the second die roll results in a 6. 
+	i)	Are the events A, B and C independent?
+	ii)	Are the events A, B and C pairwise independent?
+\item A coin is tossed until it falls on the same side twice in a row.
+\begin{itemize}
+	\item[(i)] Define the set of elementary events of such an experiment.
+	\item[(ii)]  Calculate the probability that the coin is thrown exactly 5 times.
+	\item[(iii)]  Calculate the probability that the number of throws is even.
+\end{itemize}
+%--------------------------------------------------%	
+\item	In a newspaper on average 1 in 10 000 characters is incorrectly printed. Suppose the paper contains 50 000 characters. Calculate the exact probability that 
+ \begin{itemize}
+\item[(i)]	no printing errors are made
+\item[(ii)]	at least 3 errors are made
+ \end{itemize}	
+	Using the appropriate approximation, estimate these two probabilities. 
+%--------------------------------------------------%	
+
+\item 	Suppose X has the following cumulative distribution function. F(x)=0, for x≤0, 
+	F(x)=1, for x≥5 and F(x) = x3/125 for 0≤ x ≤ 5. Derive E(X) and Var(X).
+	
+	
+	
+\item  Suppose calls come into a call centre randomly at a rate of one per 30 seconds.
+	i) What is the distribution of the time to the second call?
+	ii) Using this distribution, calculate the probability that the second call arrives within a minute. 
+	iii) Using the appropriate discrete distribution, calculate the probability that at least 2 calls are received in a minute (note this probability has to be the same as above).
+	iv) What is the exact distribution of the time to the 200th call?
+	v) Using the central limit theorem, give the normal distribution which approximates the distribution from iv).
+	vi) Using your answer from v), estimate the probability that the time to the 200th call is less than 102 minutes.
+	
+\item A coin is tossed 100 times. Using the appropriate approximating distribution, estimate the probability that
+	a) exactly 46 heads are thrown
+	b) between 48 and 59 heads (inclusively) are thrown.
+\item	I obtain a hand of 13 cards. Calculate the probability of
+	i) obtaining 2 aces.
+	ii) obtaining 2 aces and 2 kings.
+	iii) obtaining 2 aces or 2 kings.
+	
+\item A computer chooses a number at random n times from the set {1, 2, 3, 4, 5} (with replacement). Let S denote the sum of the numbers chosen. Show that
+	E(S) = 3n and Var(S) = 2n.
+	
+\item	Let Y=aX+b. Prove that i) E(Y)=aE(X)+b, ii) Var(Y)=a2Var(X).
+	
+\item	a) Suppose X has a geometric distribution with parameter p. From the standard interpretation of the geometric distribution, conditioning on whether X=1 or not and using the memoryless property of the geometric distribution
+	i)	calculate E(X)
+	ii)	calculate Var(X). [Hint: first calculate E(X2)].
+	
+\item	The probabilities with which Liverpool win, draw or lose a premier league match are 0.5, 0.3 and 0.2, respectively. Calculate the probability that in 8 matches
+	i)	Liverpool lose 2 matches.
+	ii)	Liverpool win 5 matches and draw 2.
+\item % \frametitle{Review Question 5 :  Probability}
+If A and B are events such that $P(A|B^c) = 2P(A|B)$ and $P(B^c) = 2P(B)$.
+(The event $B^c$ is the complement of event B.) Compute the probability: $P(B^c|A)$ 
+\begin{framed}
+\begin{itemize}
+\item Complement events: $P(B^c) = 1 - P(B)$. Also we are told $P(B^c) = 1-P(B)= 2P(B)$
+\item Necessarily $1 = 3P(B)$. Therefore $P(B) = 1/3$ and  $P(B^c)=2/3$
+\item Total Probability: $P(A) = P(A \mbox{ and } B) + P(A \mbox{ and } B^c)$
+\end{itemize}
+\end{framed}
+
+\item I pick 3 cards from a pack of 52. Calculate the probability that 
+\begin{enumerate}[(i)]
+\item I pick exactly one spade
+\item I pick at least one spade
+\item I pick exactly one spade, given that I pick at least one spade.
+\end{enumerate}
+
+\item The probability that a new born child is a boy is 0.51. Calculate the probability that in a family with 3 children
+\begin{enumerate}[(i)]
+\item there are two girls and one boy
+\item all the children are boys, given that the eldest and the youngest child are of the same sex.
+\end{enumerate}
+
+\item 
+Consider a couple that has two children. Treating the gender of the children as an \textit{\textbf{ordered pair}} outcome of a random experiment, the sample space is 
+\[\boldsymbol{S} = \{ (b,b), (b,g), (g,b), (g,g)\}.\]
+Let us assume that each sample point is \textit{\textbf{equiprobable}}, with probability 0.25 for each sample point.
+Find the probability $p$ that both children are girls if it is known that: 
+
+\begin{itemize}
+\item[(a)] at least one of the children is a girl,
+\item[(b)] the older child is a girl. 
+\end{itemize}
+
+\item 
+If two events A and B have the following probabilities $P(A) = 0.3$, $P(B) = 0.6$, $P(A|B) = 0.2$
+
+\begin{itemize}
+\item[(i)] Are A and B independent? Justify your answer.
+\item[(ii)] Are A and B mutually exclusive? Justify your answer.
+\item[(iii)] Calculate $P(A \cup B)$.
+\end{itemize}
+
+
+
+
+
+\item Tickets numbered 1 to 20 are mixed up and then a ticket is drawn at random. What is the probability that the ticket drawn has a number which is a multiple of 3 or 5
+
+\item 
+Which are the following pairs of events are mutually exclusive?
+
+i.
+Two dice are thrown: A is the event the sum is 10, B is the event the sum is 11
+
+
+ai.
+A hand of two cards is dealt: A is the event that the hand includes at least one red card, B is the event that the hand includes at least one black card.
+
+
+bi.
+student is chosen from the class at random: A is the event that the student is female, B is the event that a student is left-handed.
+
+
+
+
+
+
+\begin{framed}
+
+
+Solution
+
+\begin{itemize}
+\item[(i)] is mutually exclusive. cant throw 10 and 11 in same throw of two dice.
+
+
+\item[(ii)] not mutually exlusive: can have one red card and one black card.
+
+
+\item[(iii)] not mutually exclusine: can have a lefthanded female
+\end{itemize}
+\end{framed}
+%================================================================================%
+
+
+
+
+\end{document}
