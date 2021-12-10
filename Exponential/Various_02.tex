@@ -1,0 +1,48 @@
+
+%------------------------------------------------------------------------------------%
+
+\section{Review Question 10 :  Exponential Distribution}
+Suppose that the average lifespan of a PC monitor is 5 years. You may assume that the lifespan of monitors follows an exponential probability distribution.
+    \begin{enumerate}
+    \item What is the probability that the lifespan of the monitor will be at least 5 years?
+    \item What is the probability that the lifespan of the monitor will not exceed 4 years?
+    \item What is the probability of the lifespan being between 5 years and 7 years?
+    \end{enumerate}
+(Note: In a previous version of this slide, the average lifespan was incorrectly given as 6 years).
+
+%------------------------------------------------------------------------------------%
+
+\section{Review Question 10 :  Exponential Distribution}
+What is the probability that the lifespan of the monitor will be at least 5 years?
+    \begin{enumerate}
+    \item Using the following formulae
+    \[P(X \leq k) = 1-e^{-k/\mu}\]
+    \[P(X \geq k) = e^{-k/\mu}\]
+    \item $P(X\geq 5)$
+    \[P(X \geq 5) = e^{-5/5} = e^{-1} = 0.3678 \]
+    \end{enumerate}
+
+
+%------------------------------------------------------------------------------------%
+
+\section{Review Question 10 :  Exponential Distribution}
+What is the probability that the lifespan of the monitor will not exceed 4 years?
+$P(X\leq 4)$
+    \[P(X \leq 4) = 1- e^{-4/5} = 1 - e^{-0.8} = 0.5506 \]
+
+
+
+%------------------------------------------------------------------------------------%
+
+\section{Review Question 10 :  Exponential Distribution}
+What is the probability of the lifespan being between 5 years and 7 years?
+    \begin{enumerate}
+    \item $P(5 \leq X \leq 7)$
+    \item Too Low: $P(X \leq 5)$
+    \[P(X \leq 5) = 1- e^{-5/5} = 1-e^{-1} = 0.6322 \]
+    \item Too High: $P(X \geq 7)$
+    \[P(X \geq 7) = e^{-7/5} = e^{-1.4} = 0.2465 \]
+    \item P(Outside Interval) = P(Too High)+P(Too Low)
+    \item P(Inside Interval) = 1 - P(Outside)
+    \item $P(5 \leq X \leq 7)$ = 1- (0.6322+0.2465) = 0.12128
+    \end{enumerate}
