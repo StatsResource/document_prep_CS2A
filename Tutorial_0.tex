@@ -1,0 +1,371 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\chapter{Normal Distribution - Worked Examples}
+\section{Calculations}
+
+\begin{framed}
+	\begin{itemize}
+		\item The Complement Rule
+		\begin{equation}
+		P(Z \leq z) = 1 - P(Z \geq z)
+		\end{equation}
+		\item The Symmetry Rule
+		\begin{equation}
+		P(Z \leq -A) = P(Z \geq A)
+		\end{equation}
+		\item The Interval Rule.
+		Where $L$ and $U$ are the lower and upper bounds of an interval.
+		\begin{equation}
+		P(L \leq Z \leq U) = P(Z \geq L) -  P(Z \geq U)
+		\end{equation}
+		
+	\end{itemize}
+\end{framed}
+
+\section{Summary of Normal Distribution}
+
+\begin{enumerate}
+	\item Working with Tables
+	
+	\[P(Z \geq Zo)\]
+	
+	\item The Standardisation Formula
+	
+	\[P(X \leq Xo) = P(Z \leq Zo)	  \]  
+	
+	when   \[Zo=\frac{Xo- \mu}{\sigma}\]
+	
+	\item Complement Rule
+	
+	\[P(Z\geq Z_0) = 1 - P(Z \leq Z_0)\]
+	
+	\item  Symmetry Rule
+	
+	
+	\[P(Z \leq -Z_0) = P(Z \geq Z_0)\]
+	
+\end{enumerate}
+
+
+%-------------------------------------------------%
+
+
+
+\section{Normal - example}
+
+In an examination the scores of students who attend schools of type A are
+normally distributed about a mean of 55 with a standard deviation of 6. The
+scores of students who attend type B schools are normally distributed about a
+mean of 60 with a standard deviation of 5.
+
+Which type of school would have a higher proportion of students with marks above 70?
+
+\begin{itemize}
+	\item $\mu_A$ = 55
+	\item $\sigma_A$ = 8
+	\item $\mu_B$ = 60
+	\item $\sigma_B$ = 5
+\end{itemize}
+
+We have to fins $P(X_A \geq 70)$
+and $P(X_B \geq 70)$.
+
+
+using the standardisation formula
+$Z_A = \frac{70 - 55}{6} = \frac{15}{6} = 2.5 $
+
+$Z_B = \frac{70 - 60}{5} = \frac{10}{5} = 2 $
+
+
+
+\section{Normal Distribution : Arab Horses Worked Example}
+The mass of Arab horses is normally distributed with mean 900 lbs and standard deviation of 50lbs.
+\begin{itemize}
+	
+	\item  Calculate the probability that an Arab horse weighs more than 940 lbs.
+	\item Calculate the probability than an Arab horse weighs between 880 lbs and 960 lbs.
+\end{itemize}
+
+\noindent \textbf{Solution}\\
+
+\begin{itemize}
+	\item Let X be mass of Arab horses.
+	
+	\item We have to find $P(X\leq940)$.            (Remark "equality component" is included as a formality, but it is not important)
+	
+	
+	\item	Find the Z value that corresponds to 940 
+	
+	\[Zo=\frac{Xo-\mu}{\sigma}= \frac{940 -900}{50}= 0.8\]
+	
+	\[P(X \leq 940) = P(Z \leq 0.8) \]
+	
+	
+	\item		From Murdoch Barnes tables 3, we find that $P(Z \leq 0.8) = 0.2119$
+\end{itemize}
+
+
+
+
+
+Solution 
+
+\[P ( 880 \leq X \leq 960).\]
+
+
+What proportion of horses are between 880 lbs and 960 lbs?
+\begin{itemize}
+	\item Find out the probability of the complement event.
+	\item The complement event is the combination of being too high  or too low for this interval.
+	
+	\item Inside interval $P ( 880 \leq X \leq 960).$
+	
+	\item Outside interval $P (X \leq 880) + P(X \geq 960)$
+	
+	\item Complement Rule $P ( 880\leq X \leq 960)  = 1 - [P (X\leq 880) +P(X\geq 960)]$
+	
+\end{itemize}
+
+
+
+Find the probability of being too high?
+
+\[Zo=\frac{Xo-\mu}{\sigma}= \frac{960 -900}{50}= 1.2\]
+
+\[P(X \leq 960) = P(Z \leq 1.2) = 0.1151\]
+
+
+Find the probability of being too low?
+\[Zo= \frac{Xo-\mu}{\sigma}= \frac{880 -900}{50}= -0.4 \]
+\[P(X \leq 880) = P(Z \leq -0.4)  \]
+
+%------------------------------------------------------------- %
+How to compute $P(Z \leq -0.4)$
+
+Symmetry: 	$P(Z \leq -0.4)$ = $P(Z \geq 0.4)$ = 0.3446
+
+
+\begin{itemize}
+	\item Outside Interval = 0.4596        (0.3446 +  0.1151)
+	\item Inside Interval = 0.5404
+\end{itemize}
+
+
+
+%------------------------------------------------------------- %
+What weight is exceeded by 97.5\% of Arab horses?
+
+Find Xo  such that P(XXo) = 0.975
+
+\begin{itemize}
+	\item 	P(Z1.96) = 0.025     [From Tables] 
+	
+	\item	P(Z-1.96) = 0.025  [Symmetry]
+	
+	\item	P(Z-1.96) = 0.975         
+	
+	\item	\[-1.96 = \frac{Xo- 900}{50} \]
+	
+	
+	\item	Xo= 802 lbs  [Answer]
+\end{itemize}	
+
+
+
+
+
+%------------------------------------------------------------- %
+
+
+
+%----------------------------------------------------------------%
+\section{Worked Example 2 - with Solutions}
+IQ scores are assumed to have a normal distribution with mean 100 and standard deviation 15.
+
+\begin{itemize}
+	\item What IQ would you have if you were in the 80th percentile?
+	\item Estimate the threshold for the top 10 percent?
+	\item What is the probability of having an IQ above 142?
+	\item What is the probability of having an IQ below 97?
+\end{itemize}
+
+
+%----------------------------------------------------%
+	
+	\section{Worked Examples : Repeat 2006}
+	Suppose an oil exploration company purchases drill bits that have a life span that is approximately normally distributed, with a mean equal to 80 hours and a standard deviation equal to 10 hours.
+	
+	\begin{itemize}
+		\item[(i)]	What is the probability that a drill bit will fail before 60 hours of use?
+		
+		\item[(ii)]	What is the probability that a drill bit will last between 70 hours and 90 hours?
+		
+		\item[(iii)]	The life span of 95\% of drill bits is below what value?
+		
+	\end{itemize}
+	
+	
+	\section{Worked Examples : MA4104 Business Statistics SPRING 2008}
+	
+	A tyre manufacturer claims that under normal driving conditions, the tread life of a certain tyre follows a normal distribution with mean 50,000 miles and standard deviation 5000 miles. 
+	
+	\begin{itemize}
+		\item[(i)] If your tyres wear out at 45,000 miles, would you consider this unusual? Support your answer with an appropriate probability calculation using the normal curve. [ 10 marks ] 
+		
+		\item[(ii)] If the manufacturer sells 100,000 of these tyres and warrants them to last at least 40,000 miles, about how many tyres will wear out before the warranty expires? [ 10 marks ] 
+	\end{itemize}
+\section{Worked Example 3 - with Solutions}
+Assume that the number of weekly study hours for students at a certain university
+is approximately normally distributed with a mean of 22 and a standard deviation
+of 6.
+\begin{enumerate}
+	\item Find the probability that a randomly chosen student studies less than 12
+	hours.
+	\item Estimate the percentage of students that study more than 37 hours.
+\end{enumerate}
+
+\textbf{solution}
+$X \sim \mathcal(22,6^2)$  ( in form $X \sim \mathcal(\mu,\sigma^2)$\\
+
+Part 1: $P(X \leq 12)$\\
+
+
+$Z_1 = \frac{12 - 22}{6} = \frac{-10}{6} = -1.66 $\\
+
+Part 2: $P(X \geq 37)$\\
+
+$Z_2 = \frac{37 - 22}{6} = \frac{15}{6} = 2.5 $\\
+
+
+\section{Worked Example 4 - with Solutions}
+The mean is 550kg, with standard deviation 150kg, and we are interested in the area that is greater than 600kg.
+
+\begin{equation}
+Z = \frac{ X - \mu }{ \sigma }
+\end{equation}
+
+Here X = 600kg,
+$\mu$ , the mean = 550kg
+$\sigma$, the standard deviation = 150kg
+\begin{itemize}
+	\item $z = ( 600 - 550 ) / 150$
+	\item $z = 50 / 150$
+	\item $z = 0.33$
+\end{itemize}
+
+Look in the table down the left hand column for z = 0.3, and across under 0.03.
+The number in the table is the tail area for z=0.33 which is 0.3707.
+This is the probability that the weight will exceed 600kg.
+
+
+
+%----------------------------------------------------%
+
+\section{Worked Example 8 - with Solutions (Tyres)}
+% \emph{Taken from MA4104 Business Statistics Examination paper, Spring 2008}\\
+% Q1. (a) 
+A tyre manufacturer claims that under normal driving conditions, the tread life of a certain tyre follows a normal distribution with mean 50,000 miles and standard deviation 5000 miles.
+
+\begin{itemize}
+	\item[(i)] If your tyres wear out at 45,000 miles, would you consider this unusual? Support your answer with an appropriate probability calculation using the normal curve. [ 10 marks ]
+	\item[(ii)] If the manufacturer sells 100,000 of these tyres and warrants them to last at least 40,000 miles, about how many tyres will wear out before the warranty expires? [ 10 marks ]
+\end{itemize}
+
+
+Part (i) Solution
+
+\begin{itemize}
+	\item Test Value ; 45,000km			
+	\item Mean		 km	
+	\item Standard Deviation	 km
+\end{itemize}
+
+
+Find  
+
+Standardisation
+Apply the standardisation formula	 	to test value
+
+
+i.e.  = 
+
+To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+
+From Murdoch Barnes Tables (page 13)  
+
+Therefore   = 0.1587 
+
+“Complement Rule”		 =1-  for any given value A
+
+=1-  = 0.8413
+
+Conclusion
+
+15.87\% of Tyres are expected to last less than 45,000km
+
+\begin{itemize}
+\item 84.13\% of Tyres are expected to last longer than 45,000km
+
+
+
+
+Part (i) Solution
+
+Lower Limit ; 40,000km			Mean		 km	
+Standard Deviation	 km
+
+Find  
+
+\item Standardisation
+Apply the standardisation formula	 	to limit
+
+
+i.e.  = 
+
+\item To find   we use the “Property of Symmetry”
+
+“Property of Symmetry” -   for any value A
+
+
+\item From Murdoch Barnes Tables (page 13)  
+
+Therefore   = 0.02275 
+
+\item \textbf{Conclusion}
+2.275\% of Tyres are expected to last less than 40,000km
+
+Of a Batch of 100,000 tyres,  2270 tyres will wear out before the warranty expires.
+\end{itemize}
+%==================================================%
+
+
+\section{Worked Example 10 - with Solutions}
+%- Spring 2006 Q3.    (a)	
+
+The breaking strength of a certain type of plastic block is normally distributed with a
+mean of 1500kg and standard deviation of 50kg. 
+
+\begin{itemize}
+	\item (iv)	What is the probability that a block with have a breaking strength greater than 1570kg?
+	\item (v)	What is the probability that a block with have a breaking strength measuring between 1482kg and 1518kg?
+	\item (iii)	Determine the maximum load such that no more than 5`\% of the blocks break?
+\end{itemize}

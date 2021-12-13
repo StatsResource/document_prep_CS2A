@@ -1,0 +1,135 @@
+
+%---------------------------------------------%
+{
+	\noindent \textbf{MA4413 Autumn 2008 paper (part 2)}
+	\begin{itemize}
+		\item What proportion of retrieval times will be between 150 and 250 milliseconds?
+		\item Find $P(150 \leq X \leq 250)$
+		\item Use the `Too Low / Too High ' approach.
+		\item Too low $P( X \leq 150)$
+		\item Too high $P( X \geq 250)$
+		\item Find the z-scores for each.
+		\[ z_{150} =  {150 - 200 \over 58}  = -0.86 \]
+		\[ z_{250} =  {250 - 200 \over 58}  = 0.86 \]
+	\end{itemize}
+	\begin{itemize}
+		\item We can now say
+		\[ 1. P( X \leq 150) = P( Z \leq -0.86)\]
+		\[ 2. P( X \geq 250) = P( Z \geq 0.86)\]
+		\item By symmetry rule, $P( Z \leq -0.86) = P( Z \geq 0.86)$
+		\[ P( X \leq 150) =  P( X \geq 250) \]
+		\item Let's compute $P( X \geq 250)$. Using tables
+		\[P( X \geq 250) = P( Z \geq 0.86) = 0.1949 \]
+	\end{itemize}
+	\begin{itemize}
+		\item Too high: $P( X \geq 250) = 0.1949 $
+		\item Too low:  $P( X \leq 150) = 0.1949 $
+		\item Probability of being inside interval:
+		
+		\[ P(150 \leq X \leq 250) = 1- [ P( X \leq 150) + P( X \geq 250)] \]
+		
+		\item $P(150 \leq X \leq 250) = 1- [ 0.1949 + 0.1949 ] = \boldsymbol{0.6102}$
+		
+	\end{itemize}
+\begin{itemize}
+		\item What is the retrieval time below which 10\% of retrieval times will be?
+		\item Find $A$ such that $P(X \leq A) = 0.10$.
+		\item What z-score would correspond to $A$? Lets call it $z_A$.
+		\item $P(Z  \leq z_A) = 0.10$
+		\item Remark: $z_A$ could be negative.
+		\item Using symmetry $P(Z \geq -z_A) = 0.10$
+		\item Remark: $-z_A$ could be positive.
+	\end{itemize}
+}
+
+
+\noindent \textbf{Normal Distribution}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{images/5BNormal4}
+	\caption{}
+	\label{fig:5BNormal4}
+\end{figure}
+
+
+\begin{itemize}
+		\item Use the Murdoch Barnes tables to get an approximate value for $-z_A$.
+		\item The nearest value we can get is 1.28. ( $P( Z \geq 1.28) = 0.1003$ ).
+		\item If $-z_A = 1.28$, then $z_A=-1.28$
+		\item We can now say
+		\[ P(X \leq A) = P(Z \leq -1.28) \]
+		
+		\item Necessarily $A$ and $Z_A$ are related by the standardization formula
+		\item Recall that $\mu = 200$ and $\sigma = 58$.
+		\[ -1.28  = {A - 200 \over 58} \]
+		\item Re-arranging ( multiply both sides by 58)
+		\[ -74.24  = A - 200 \]
+		\item Re-arranging again (Add 200 to both sides)
+		\[ 125.76 =  A \]
+
+		\item Now we know the retrieval time below which 10\% of retrieval times will be.
+		\item $P(X \leq 125.76) = 0.10$ [Answer].
+	\end{itemize}
+
+
+
+
+\section*{May 2013 Question 3 Normal Distributions}
+
+\noindent \textbf{Important Information from the Question}
+\begin{itemize}
+	\item Normal Mean $\mu$ = 1000 units
+	\item Normal Standard Deviation $\sigma$ = 200 units 
+\end{itemize}
+
+\subsection*{Objectives}
+Compute the following : 
+\begin{itemize}
+	\item $P(X \geq 1400 )$ More than 1400
+	\item $P(X \leq 500)$ Less than 500
+\end{itemize}
+
+
+\noindent \textbf{Part 1 -  More than 1400}
+
+Firstly compute the z score for 1400.
+
+\[ Z_{1400} =  \frac{X - \mu}{\sigma} = \frac{1400 - 1000}{200} = \frac{400}{200} = 2  \]
+
+So the \textbf{Z-score} in this case is 2.
+
+This much we can say
+\[P(X \geq 1400) = P(Z \geq 2)\]
+
+$P(Z \geq 2)$ can be determined using statistical tables.
+Depending on which statistical tables you are using, you will get one of the following answers. (Note the 
+second and third statements are examples of complementary probabilities.)
+\begin{itemize}
+	\item $P (0 \leq Z \leq 2)$ = 0.4775
+	\item $P ( Z \leq 2)$ = 0.9775
+	\item $P ( Z \geq 2)$ = 0.0225
+\end{itemize}
+The last expression is useful here. Recall that $P(X \geq 1400) = P(Z \geq 2)$. Therefore
+
+\[P(X \geq 1400) = 0.0225\]
+
+
+%=============================================%
+\subsection*{Return on Investment Question}
+
+\begin{itemize}
+	\item The company needs to recover its investment in one year (i.e. make 50000).
+	\item As each product sells for 2 dollars profit, the company needs to sell 25,000 units to recover its investment.
+	\item we need to compute the probability of selling more than 25,000 units.
+	\[P(X \geq 25000) \]
+	\item We are told the normal mean for demand $\mu =20000$ and the normal standard deviation $\sigma = 4000$.
+	\item The first step is to compute the \textbf{\textit{z-score}}
+	\[ z = \frac{x - \mu}{\sigma}  = \frac{25000 - 20000}{4000} = \frac{5000}{4000} = 1.25\]
+\end{itemize}
+
+
+
+
+
+
+\end{document}
