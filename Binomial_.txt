@@ -1,0 +1,19 @@
+
+Q4
+
+
+(a)  Four  per cent of PCB boards purchased over the Internet from the Far East have some defect.  From a large consignment of boards, 50 are chosen at random.  What is the probability that:
+(i)3 or more boards have some defect?
+(ii)Exactly 2 boards are defective?
+(iii)Less than 3 boards are defective?
+(iv)If more than 5 boards from the 50 were defective what action would you take? (justify)
+
+(b) Flaws occur in a hard wood timbers  at the rate of 1.5 per linear  metre section.  Calculate the probability that:
+(i)3 or more flaws will occur in a 3  metre length 
+(ii)Exactly 4 flaws will occur in a 10 metre length
+(iii)8 or less flaws will occur in a 6  metre length 
+
+(c)There is a constant probability of 0.05  that the power supply in telecoms network will not start.  You are requested to calculate the probability that the power supply will fail the 5th time it is activated.
+
+%==================================================================%
+\newpage
