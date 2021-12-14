@@ -74,20 +74,3 @@ $\Pr(X=x)$ & $0.2$ & $0.75$ & $0.05$ & & $\Pr(Y=y)$ & $0.1$ & $0.6$ & $0.3$ \\[0
 \item[(a)] What is the average attack power of each player?  \item[(b)] If both players have 1000 hit-points, how many attacks does it take for player 1 to defeat player 2 and vice versa? Which player will win on average?  \item[(c)] Let's now assume that player 1 uses his/her \emph{first} turn to cast a spell (and therefore does not attack in this turn). The result of the spell is that player 2 can no longer perform a critical blow, i.e., $\Pr(Y=200) = 0$, \emph{from turn two onwards}. Since setting $p(200) = 0$ leads to $\sum p(y) \ne 1$, assume that the remaining probability ($= 0.3$) is distributed evenly between $p(0)$ and $p(80)$. What is the outcome of the battle now?
 \end{itemize}
 
-%=================================================%
-\subsection*{Question 4}
-Consider a RAID (redundant array of inexpensive disks) system constructed using the hard disks described in Question 3. Specifically, we will assme that the system is made up of \emph{two} of these hard disks which work/fail \emph{independently} of each other.\\[-0.2cm]
-\begin{itemize}
-\item[(a)] Let $H =$  ``hard disk works for more than a year''. Calculate $\Pr(H) = \Pr(T > 1)$.  \\\item[(b)] Calculate $\Pr(\text{RAID-0 fails within a year})$.  \item[(c)] Calculate $\Pr(\text{RAID-1 fails within a year})$.   \item[(d)] What would $E(T)$ need to be so that $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.  \item[(e)] Rather than increasing the \emph{quality} of hard disk, we can increase the \emph{number} of hard disks. How many of the original hard disks are needed to achieve $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.
-\end{itemize}
-
-
-
-\subsection*{Question 4}
-{\footnotesize({\bf Note}: this is not a queueing theory question. It is a generalisation of a question which appears on Tutorial2)}\\[0.1cm]
-There are two possible routes to a particular location. You take $R_1$ 80\% of the time and $R_2$ 20\% of the time. We assume that travel time has an exponential distribution and, furthermore, the average travel time is 0.25 hours if you take $R_1$ and 0.5 hours if you take $R_2$.\\[-0.2cm]
-
-\begin{itemize}
-\item[(a)] Calculate the probability that the journey takes more than 0.5 hours for each of the routes, i.e., $\Pr(T > 0.5\,|\,R_1)$ and $\Pr(T > 0.5\,|\,R_2)$ respectively.  \item[(b)] Calculate $\Pr(T > 0.5)$. (hint: law of total probability)  \item[(c)] Given that $T>0.5$ hours, what is the probability that you used $R_1$? (i.e., calculate $\Pr(R_1\,|\,T>0.5)$)  \item[(d)] Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t = 1$ and $t = 2$ respectively. Interpret the results.
-\end{itemize}
-
