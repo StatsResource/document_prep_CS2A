@@ -1,1 +1,0 @@
-	%\item	Let Y=aX+b. Prove that i) E(Y)=aE(X)+b, ii) Var(Y)=a2Var(X).
