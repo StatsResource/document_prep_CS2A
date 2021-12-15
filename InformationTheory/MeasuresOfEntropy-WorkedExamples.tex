@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} 
+\chead{Information Theory} \rhead{Entropy} %\input{tcilatex}
+\begin{document}
+
+\Large 
+
+\section*{Exercise}
+
+\noindent A discrete memoryless source (DMS) $X$ has four symbols $x_1 , x_2,$ $x_3, x_4$ with probabilities: \\ \\$P(x_1) = 0.4, \;P(x_2) = 0.3,\; P(x_3) = 0.2.\;$ and $P(x_4) = 0.1$.
+\smallskip 
+\begin{itemize}
+\item[(a)] Calculate $H(X)$.
+\item[(b)] Find the amount of information contained in the messages $x_lx_2x_lx_3$ and $x_4x_3x_3x_2$.
+\end{itemize}
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+\medskip 
+\noindent \textbf{Part (a)}
+
+\[ H(X) = - \sum \limits^{4}_{i=1} P(x_i) log_2 [P(x_i)] \]
+
+\[ H(X) = -0.4\mbox{log}_2(0.4) - 0.3\mbox{log}_2(0.3)  -0.2\mbox{log}_2(0.2)  -0.1\mbox{log}_2(0.1) \]
+
+
+
+\[ H(X) =  0.5288 + 0.5210 + 0.4644 + 0.3322  = \textbf{1.85} \mbox{b/sec} \]
+
+
+
+
+\medskip 
+\noindent \textbf{Part (b)}\\
+\bigskip 
+Message 1:
+\begin{itemize}
+\item (Remark: from probability, recall independent events) \bigskip
+\item $P(x_lx_2x_lx_3) = 0.4\times 0.30 \times 0.40 \times 0.20  = 0.0096$ \bigskip
+\item $I(x_lx_2x_lx_3) = -\mbox{log}_2(0.0096)  = 6.70$b/symbol \bigskip
+\end{itemize}
+
+\bigskip 
+\newpage 
+Message 2:
+\begin{itemize}
+\item $P(x_4x_3x_3x_2) = 0.1\times 0.20 \times 0.20 \times 0.30  = 0.0012$ \bigskip
+\item $I(x_lx_2x_lx_3) = -\mbox{log}_2(0.0012)  = 9.70$b/symbol \bigskip
+\end{itemize}
+
+\newpage 
+\end{document}

@@ -1,0 +1,58 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{Probability} \chead{Negative Binomial Distribution} %\input{tcilatex}
+
+\begin{document}
+	\large
+	\section*{Negative Binomial Distribution}
+	Just as the Bernoulli and the Binomial distribution are related in counting the number of successes in 1 or more trials, 
+	Geometric and the Negative Binomial distribution are related in the number of trials needed to get 1 or more successes.\\
+	\medskip
+	
+	%===============================================================%
+	\noindent The Negative Binomial distribution refers to the probability of the number of times needed to do something until achieving a fixed number of desired results. For example:
+	
+	\begin{itemize}
+		\item How many times will I throw a coin until it lands on heads for the 10th time?
+		\item How many children will I have when I get my third daughter?
+		\item How many cards will I have to draw from a pack until I get the second Joker?
+	\end{itemize}
+	
+	\noindent Just like the Binomial Distribution, the Negative Binomial distribution has two controlling parameters: the probability of success $p$ in any independent test and the desired number of successes $m$. \\
+	
+	\noindent If a random variable X has Negative Binomial distribution with parameters p and m, its probability mass function is:
+	
+	\[P(X=n) = {n-1 \choose m-1} p^m (1-p)^{n-m} \mbox{, for } n \ge m.\]
+	\subsection*{Example}
+	A travelling salesman goes home if he has sold 3 encyclopedias that day. Some days he sells them quickly. Other days he's out till late in the evening. If on the average he sells an encyclopedia at one out of ten houses he approaches, what is the probability of returning home after having visited only 10 houses?
+	
+	\subsection*{Answer:}
+	
+	The number of trials $X$ is Negative Binomial distributed with parameters p=0.1 and m=3, hence:
+	
+	\[P(X=10) = {9 \choose 2} 0.1^3 0.9^7 = 0.017219.\]
+	
+\end{document}

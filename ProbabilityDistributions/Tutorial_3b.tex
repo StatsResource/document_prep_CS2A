@@ -1,0 +1,76 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\section{Tutorial F}
+
+\subsection*{Question 1}
+Jobs are sent to a supercomputer at a rate of 10 per hour and take the supercomputer on average 4 minutes to process. We will assume that the number of arrivals is $X_a \sim \text{Poisson}(\lambda_a)$ and the processing (i.e., service) time is $T_s \sim \text{Exponential}(\lambda_s)$. This leads to an $M/M/1$ system.\\[-0.2cm]
+
+\begin{enumerate}[(i)]
+\item Let $T$ be the total time in the system - what distribution has $T$? \item What is the average time spent in the system? Calculate $Sd(T)$ also. \item How many jobs are in the system on average? (hint: Little's law)  \item From the time the job is sent, what is the probability that it takes more than 15 minutes to complete? \item  From the time the job enters the processor (i.e., service component), what is the probability that it takes more than 15 minutes to complete? \item What is the average number of jobs completed in a 3 hour period of operation? (hint: Burke's theorem) \item What is the probability that more than 40 jobs are completed in a 3 hour period? (hint: Burke's theorem again)
+\end{enumerate}
+
+
+
+
+
+
+
+
+\subsection*{Question 2}
+You flip three coins. Let $X = $ ``the number of heads'' and $Y = $ ``the number of unique faces''.\\[-0.2cm]
+\begin{itemize}
+\item[(a)] What is the sample space for this experiment?  \item[(b)] Construct the \emph{joint distribution} for $X$ and $Y$.  \item[(c)] Based on this joint distribution, construct the \emph{marginal} distribution for $X$ and for $Y$.  \item[(d)] Are $X$ and $Y$ independent?  \item[(e)] Calculate $E(Y)$ and $Sd(Y)$.  \item[(f)] Calculate $\Pr(Y=2\,|\,X=2)$ and interpret its value (compare with $\Pr(Y=2)$).
+\end{itemize}
+
+
+
+%=================================================%
+
+\subsection*{Question 3}
+Customers arrive to a deli counter at a rate of 12 per hour. On average it takes 3 minutes to serve a customer at this counter. Customers then exit and head to another counter to pay. It takes 1 minute to deal with a customer at this counter. We will assume that arrivals have a Poisson$(\lambda_a)$ distribution and service times have Exponential$(\lambda_{s1})$ and Exponential$(\lambda_{s2})$ distributions respectively (hint: this is a sequence of two $M/M/1$ systems).\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] What is the average time spent in each sub-system?  \item[(b)] What is the average total time spent in the system?  \item[(c)] How many customers are there (on average) in the system?   \\\item[(d)] Calculate the utilisation factor for each sub-system.  \item[(e)] What is the average total queueing time? (i.e., total time excluding service time)  \item[(f)] Calculate the probability that at least 20 people exit the shop (i.e., the whole system) in one hour.
+\end{itemize}
+%=================================================%
+\subsection*{Question 3}
+Let $X =$ ``the attack power of player 1'' and let $Y =$ ``the attack power of player 2''.\\[-0.3cm]
+
+Let the probability distributions for $X$ and $Y$ be:
+\begin{center}
+\begin{tabular}{|c|ccc|c|c|ccc|}
+\cline{1-4}\cline{6-9}
+&&&&&&&&\\[-0.4cm]
+$x$ & 0 & 100 & 300 & \qquad\qquad & $y$ & 0 & 80 & 200\\
+\cline{1-4}\cline{6-9}
+&&&&&&&&\\[-0.4cm]
+$\Pr(X=x)$ & $0.2$ & $0.75$ & $0.05$ & & $\Pr(Y=y)$ & $0.1$ & $0.6$ & $0.3$ \\[0.1cm]
+\cline{1-4}\cline{6-9}
+%\multicolumn{9}{c}{}
+\end{tabular}
+\end{center}
+{\footnotesize(e.g., p1 misses 20\% of the time, deals 100 points of damage 75\% of the time and performs a critical blow 5\% of the time.)}\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] What is the average attack power of each player?  \item[(b)] If both players have 1000 hit-points, how many attacks does it take for player 1 to defeat player 2 and vice versa? Which player will win on average?  \item[(c)] Let's now assume that player 1 uses his/her \emph{first} turn to cast a spell (and therefore does not attack in this turn). The result of the spell is that player 2 can no longer perform a critical blow, i.e., $\Pr(Y=200) = 0$, \emph{from turn two onwards}. Since setting $p(200) = 0$ leads to $\sum p(y) \ne 1$, assume that the remaining probability ($= 0.3$) is distributed evenly between $p(0)$ and $p(80)$. What is the outcome of the battle now?
+\end{itemize}
+

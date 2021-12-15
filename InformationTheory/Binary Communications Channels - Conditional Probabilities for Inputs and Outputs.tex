@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} 
+\chead{Information Theory}  \rhead{Probability} %\input{tcilatex}
+\begin{document}
+
+\section*{Exercise}
+
+\large The frequency of a `0' signal to a binary channel is 0.6. If the `0' is the input, then `0' is the output with probability 0.8.\\
+\smallskip
+\noindent If `1' is the input, then output is `1' with probability 0.9.
+
+\begin{enumerate}[(a)]
+\item Calculate the probability that the output is `1' 
+\item Calculate the probability that the output is `0' 
+\item Calculate the probability that the input is 1, given that the output is 1.
+\item Calculate the probability that the input is 0, given that the output is 0.
+\end{enumerate}
+
+\medskip
+
+%-----------------------------------------------------------------------------------%
+
+\subsection*{Events and Notation}
+\begin{itemize}
+\item Let $IU$ be the event that the input is `1' \\(i.e. $I$ for Input, $U$ rather than $O$ for `1'.)
+\item Let $OU$ be the event that the output is `1' \\(i.e. $O$ for output.)
+\item Let $IZ$ be the event that the input is `0' \\(i.e. $Z$ for Zero.)
+\item Let $OZ$ be the event that the output is `0'
+\end{itemize}
+
+\subsection*{Conditional Probabilities}
+\begin{itemize}
+\item $P(IZ) = 0.6$  Necessarily $P(IU) = 0.4$
+\item $P(OZ|IZ) = 0.8$  Necessarily $P(OU|IZ) = 0.2$
+\item $P(OU|IU) = 0.9$  Necessarily $P(OZ|IU) = 0.1$
+\end{itemize}
+
+%-----------------------------------------------------------------------------------%
+
+\subsection*{Part (a)}
+Calculate the probability that the output is `1'.
+\begin{itemize}
+\item $P(OU) = P(OU \cap IU) + P(OU \cap IZ)$
+
+\item $P(OU) = [P(OU|IU) \times P(IU) ] + [P(OU|IZ) \times P(IZ) ]$
+
+\item $P(OU) = [0.9 \times 0.4 ] + [0.2 \times 0.6 ]$
+
+\item $P(OU) = [0.36] + [0.12] = \boldsymbol{0.48}$
+\end{itemize}
+(Necessarily $P(OZ) = 0.52$.)
+
+%-----------------------------------------------------------------------------------%
+
+\subsection*{Part (b)}
+Calculate the probability that the output is `0' ( from first principles ).
+\begin{itemize}
+\item $P(OZ) = P(OZ \cap IU) + P(OZ \cap IZ)$
+
+\item $P(OZ) = [P(OZ|IU) \times P(IU) ] + [P(OZ|IZ) \times P(IZ) ]$
+
+\item $P(OZ) = [0.1 \times 0.4 ] + [0.8 \times 0.6 ]$
+
+\item $P(OZ) = [0.04] + [0.48] = \boldsymbol{0.52}$
+\end{itemize}
+
+
+%-----------------------------------------------------------------------------------%
+\subsection*{Part (c)}
+Compute $P(IU|OU)$ 
+
+\begin{itemize}
+\item Use Bayes's Theorem to solve this.
+
+\[P(IU|OU) = { P(OU|IU) \times P(IU)\over P(OU) } \]
+
+\item $P(OU|IU)\times P(IU)$ = $0.9 \times 0.4 = 0.36$
+\item From before $P(OU) = 0.48$
+\item Therefore $P(IU|OU) = 0.36 / 0.48 = \boldsymbol{0.75}$
+\item (Necessarily $P(IZ|OU)  = 0.25$)
+\end{itemize}
+
+
+
+%-----------------------------------------------------------------------------------%
+
+\subsection*{Part (d)}
+Compute $P(IZ|OZ)$ 
+\begin{itemize}
+\item Use Bayes's Theorem to solve this.
+
+\[P(IZ|OZ) = {P(OZ|IZ)\times P(IZ)\over P(OZ)} \]
+
+\item $P(OZ|IZ)\times P(IZ)$ = $0.8 \times 0.6 = 0.48$
+
+\item From before $P(OZ) = 0.52$
+
+\item Therefore $P(IZ|OZ) = 0.48 / 0.52 = \boldsymbol{0.923}$
+
+\item (Necessarily $P(IU|OZ)  = 0.077$)
+\end{itemize}
+
+\end{document}
+%--------------------------------------------------------------------------------%

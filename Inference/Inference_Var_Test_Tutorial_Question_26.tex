@@ -1,0 +1,56 @@
+
+\subsection*{Test 2. F Test for equality of variance}
+\begin{itemize}
+	
+\item In this procedure, we determine whether or not two \textit{\textbf{populations}} have the same variance.
+	
+\item The assumption of equal variance of two populations underpins several inference procedures. This assumption is tested by comparing the variance of samples taken from both populations.
+	
+\item The null and alternative hypotheses are as follows:
+	\[ H_0: \sigma^2_1 = \sigma^2_2 \]
+	\[ H_1: \sigma^2_1 \neq \sigma^2_2 \]
+\end{itemize}
+\begin{framed}
+	\begin{verbatim}
+	> var.test(X,Y)
+	
+F test to compare two variances
+
+data:  X and Y
+F = 2.5122, num df = 9, denom df = 9, p-value = 0.1862
+alternative hypothesis: true ratio of variances
+is not equal to 1
+95 percent confidence interval:
+0.6239986 10.1141624
+sample estimates:
+ratio of variances 
+2.512215 
+\end{verbatim}
+\end{framed}
+
+\subsection*{Test 3. Shapiro Wilk's Test for Normality}
+\begin{itemize}
+
+\item We will often be required to determine whether or not a data set is normally distributed.
+This assumption underpins many statistical models.
+
+\item The null hypothesis is that the data set is normally distributed.
+
+\item The alternative hypothesis is that the data set is not normally distributed.
+
+\item One procedure for testing these hypotheses is the Shapiro-Wilk test, implemented in \texttt{R} using the command \texttt{shapiro.test()}.
+\end{itemize}
+\begin{framed}
+\begin{verbatim}
+> shapiro.test(X)
+
+Shapiro-Wilk normality test
+
+data:  X
+W = 0.9849, p-value = 0.1012
+
+
+\end{verbatim}
+\end{framed}
+
+\end{document}

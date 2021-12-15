@@ -1,0 +1,126 @@
+
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{framed}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{StatsResource} \rhead{The Negative Binomial Distribution} %\chead{Probability Distributions} %\input{tcilatex}
+
+\begin{document}
+\Large 
+\noindent Derive the mean and variance of the negative binomial distribution.
+\begin{framed}
+\noindent The probability mass function of a negative binomial random variable distributed $NB(r,p)$ is
+
+\[f(x) = {x+r-1 \choose r-1} p^x (1-p)^r \]
+\end{framed}
+\medskip
+\begin{framed}
+\[\sum^{\infty}_{x=0} f(x) = \sum^{\infty}_{x=0}{x+r-1 \choose r-1} p^x (1-p)^r  = 1\]
+\end{framed}
+%===============================================================%
+\subsection*{Mean}
+The mean can be derived as follows.
+
+\begin{eqnarray*}
+\operatorname{E}[X] &=& \sum_i f(x_i)  \cdot x_i \\
+&=& \sum_{x=0}^\infty  {x+r-1 \choose r-1} p^x (1-p)^r  \cdot  x\\
+& & \\
+&=& {0+r-1 \choose r-1} p^0 \left(1-p\right)^r  \cdot  0 +  \sum_{x=1}^\infty  {x+r-1 \choose r-1} \;p^x (1-p)^r  \cdot  x\\
+& & \\
+&=& 0 +  \sum_{x=1}^\infty \; {(x+r-1)! \over (r-1)!x!} \;p^x (1-p)^r  \cdot  x\\
+& & \\
+&=& {rp \over 1-p}\sum_{x=1}^\infty \; {(x+r-1)! \over r!(x-1)!} \;p^{x-1} (1-p)^{r+1}\\
+\end{eqnarray*}
+\newpage 
+Now let $s = r+1$ and $w=x-1$ inside the summation.
+
+\[\operatorname{E}[X] = {rp \over 1-p}\; \left[\sum_{w=0}^\infty  {(w+s-1)! \over (s-1)!w!} \;p^w (1-p)^s  \right] \]
+
+\[\operatorname{E}[X] = {rp \over 1-p}\; \left[\sum_{w=0}^\infty  {w+s-1 \choose s-1} p^w (1-p)^s \right] \]
+\smallskip 
+\noindent We see that the summation is the sum over the complete probability mass functions of a negative binomial random variable $W$ distributed NB(s,p), which is 1 .%(and can be verified by applying Newton's generalized binomial theorem).
+
+\[\operatorname{E}[X] = {rp \over 1-p}\]
+
+\begin{framed}
+Remark:
+\begin{eqnarray*}
+\operatorname{E}[W] &=& \sum_i f(w_i)  \cdot w_i \\
+&=& \sum_{w=0}^\infty  {w+s-1 \choose s-1} p^w (1-p)^s  \cdot  w\\
+&=& {sp \over 1-p}\\
+\end{eqnarray*}
+\end{framed}
+%===============================================================%
+\newpage 
+\section*{Variance}
+We derive the variance using the following formula:
+
+\[\operatorname{Var}[X] = \operatorname{E}[X^2] - (\operatorname{E}[X])^2\]
+We have already calculated $E[X]$ above, so now we will calculate $E[X^2]$ and then return to this variance formula:
+
+\begin{eqnarray*}
+\operatorname{E}[X^2] &=& \sum_i f(x_i) \cdot x^2\\
+& & \\
+&=&\sum_{x=0}^\infty {x+r-1 \choose r-1} p^x (1-p)^r \cdot x^2\\
+& & \\
+&=& 0 \;+\; \sum_{x=1}^\infty {x+r-1 \choose r-1} p^x (1-p)^r x^2\\
+& & \\
+&=& \sum_{x=1}^\infty {(x+r-1)! \over (r-1)!x!} p^x (1-p)^r x^2\\
+& & \\
+&=& {rp \over 1-p}\sum_{x=1}^\infty {(x+r-1)! \over r!(x-1)!} p^{x-1} (1-p)^{r+1} x\\
+\end{eqnarray*}
+
+\noindent Again, let $s = r+1$ and $w=x-1$.
+
+\begin{itemize}
+    \item $x+r = w+s$
+    \item $x = w+1$
+\end{itemize}
+
+\begin{eqnarray*}
+\operatorname{E}[X^2] &=&  = {rp \over 1-p}\sum_{w=0}^\infty {(w+s-1)! \over (s-1)!w!}\; p^w (1-p)^s \;(w+1)\\
+& & \\
+&=& {rp \over 1-p}\sum_{w=0}^\infty {w+s-1 \choose s-1} p^w (1-p)^s (w+1)]\\
+& & \\
+&=& {rp \over 1-p}\left[\sum_{w=0}^\infty {w+s-1 \choose s-1} p^w (1-p)^s w  \right]  + \\
+& & {rp \over 1-p}\left[\sum_{w=0}^\infty {w+s-1 \choose s-1} p^w (1-p)^s \right] \\
+\end{eqnarray*}
+
+\medskip
+\noindent The first summation is the mean of a negative binomial random variable distributed NB(s,p) and the second summation is the complete sum of that variable's probability mass function.
+
+\begin{eqnarray*}
+\operatorname{E}[X^2] &=& {rp \over 1-p}\left[{sp \over 1-p}+1\right]\\
+& & \\
+&=& {rp \over 1-p}\left[{(r+1)p \over 1-p}+ {1-p \over 1-p} \right]\\
+& & \\
+&=&  {rp(1+rp) \over (1-p)^2}\\
+\end{eqnarray*}
+
+We now insert values into the original variance formula.
+
+\[\operatorname{Var}[X] = {rp(1+rp) \over (1-p)^2} - \left({rp \over 1-p}\right)^2\]
+\[\operatorname{Var}[X] = {rp \over (1-p)^2} \]
+
+
+\end{document}
