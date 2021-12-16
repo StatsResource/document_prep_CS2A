@@ -6,9 +6,9 @@
 
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-	&Number&	Mean&	Std. Dev.\\ \hline
-Male	&10	&57	&12\\
-Female	&12	&61	&11\\
+&Number&Mean&Std. Dev.\\ \hline
+Male&10&57&12\\
+Female&12&61&11\\
   \hline
 \end{tabular}
 \end{center}
