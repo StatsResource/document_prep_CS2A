@@ -1,9 +1,20 @@
-%=================================================%
+\section{KB Tutorial 2}
+
 \subsection*{Question 4}
-Consider a RAID (redundant array of inexpensive disks) system constructed using the hard disks described in Question 3. Specifically, we will assme that the system is made up of \emph{two} of these hard disks which work/fail \emph{independently} of each other.\\[-0.2cm]
+Consider a RAID (redundant array of inexpensive disks) system where multiple hard disks are used simultaneously.\\[0.2cm]
+Let's assume that we have two hard disks that work \emph{independently} of each other. Define the events $H_1 =$ ``hard disk one works'' and $H_2 =$ ``hard disk two works'' and also assume that $\Pr(H_1) = \Pr(H_2) = 0.9$.\\ \smallskip
 \begin{itemize}
-\item[(a)] Let $H =$  ``hard disk works for more than a year''. Calculate $\Pr(H) = \Pr(T > 1)$.  \\\item[(b)] Calculate $\Pr(\text{RAID-0 fails within a year})$.  \item[(c)] Calculate $\Pr(\text{RAID-1 fails within a year})$.   \item[(d)] What would $E(T)$ need to be so that $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.  \item[(e)] Rather than increasing the \emph{quality} of hard disk, we can increase the \emph{number} of hard disks. How many of the original hard disks are needed to achieve $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.
+\item RAID-0 is a system which increases performance but only works if \emph{both} hard disks work.
+\item RAID-1 is a system which does not increase performance but still works with only one working hard disk.
 \end{itemize}
+
+{\bf(a)} Calculate $\Pr(\text{RAID-0 works})$ and $\Pr(\text{RAID-0 fails})$. \\[0.3cm] 
+{\bf(b)} Calculate $\Pr(\text{RAID-1 works})$ and $\Pr(\text{RAID-1 fails})$. 
+{\bf(c)} Calculate $\Pr(H_1^c)$ and $\Pr(H_2^c)$. \\[0.3cm]
+
+{\bf(d)} Cheap hard disks exist with $\Pr(H) = 0.6$. Consider a RAID-1 system with 3 of these hard disks - calculate $\Pr(\text{RAID-1 fails})$ in this case. \\[0.3cm] 
+{\bf(e)} In part (a) we found that $\Pr(\text{RAID-1 fails}) = 0.01$. How many cheap disks would be required to match this level of reliability?
+
 
 
 
