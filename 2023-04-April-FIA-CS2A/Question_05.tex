@@ -1,0 +1,60 @@
+5 A sample of size n is taken from a process, X_{t}, which is believed to be an ARMA(1,1)
+process of the form
+𝑋􀯧 􀵌 $a$𝑋􀯧􀬿􀬵 􀵅 𝑒􀯧 􀵅 $b$𝑒􀯧􀬿􀬵
+where |$a$|, |$b$| 􀵏 1. The sample autocorrelations at lag 1 and lag 2 are 0.65 and 0.325,
+respectively.
+\item   Estimate the parameters a and b by equating the sample autocorrelations to the
+theoretical values. 
+Fisher’s transformation states that the sample correlation coefficient, r, between two
+random variables, Y and Z, is such that 􀰭
+􀰮􀭪􀭭􀭥􁉀􀰭􀰶􀳝
+􀰭􀰷􀳝􁉁 is approximately Normally distributed
+with mean 􀬵
+􀬶 log 􁉀􀬵􀬾􀮡
+􀬵􀬿􀮡􁉁 and variance 􀬵
+􀯡􀬿􀬷, where \rho  is the theoretical correlation
+coefficient between Y and Z and n is the sample size.
+\item   Determine the minimum value of n necessary to reject the null hypothesis that
+b = 0 in favour of the alternative b > 0 at the 95% significance level. You
+should assume that a is equal to the value determined in part \item   and use
+Fisher’s transformation on the autocorrelation at lag 1. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+Q5
+\item  
+We have (1 + a * b) * (a + b) / (1 + b^2 + 2 * a * b) = 0.65 (1) 
+and (1 + a * b) * (a + b) / (1 + b^2 + 2 * a * b) * a = 0.325 (2) 
+Dividing (2) by (1) gives a = 0.5 \item 
+Substituting in (1) gives:
+(1 + 0.5 * b) * (0.5 + b) = 0.65 * (1 + b^2 + 2 * 0.5 * b) \item 
+i.e. 0.5 * b^2 + 1.25 * b + 0.5 = 0.65 * (b^2 + b + 1) \item 
+i.e. 0.15 * b^2 - 0.6 * b + 0.15 = 0. \item 
+The roots of this quadratic are 0.268 and 3.732 
+We require the root less than 1 in magnitude \item 
+which is 0.268 \item 
+\item  
+For autocorrelation at lag 1 the sample size to be used in the formula for Fisher’s transformation is n - 1 
+The test statistic ½ * log ((1 + r_1) / (1 - r_1)) is approximately Normally distributed
+with mean ½ * log ((1 + rho_1) / (1 - rho_1)) and variance 1 / (n - 4), where r_1 is
+the sample autocorrelation at lag 1 and rho_1 is the theoretical autocorrelation at
+lag 1 
+For a = 0.5 and b = 0, rho_1 = 0.5 \item 
+The 95th percentile of the standard Normal distribution is 1.645 \item 
+We therefore require the least positive integer n such that
+½ * log ((1 + 0.65) / (1 - 0.65)) - ½ * log ((1 + 0.5) / (1 - 0.5)) > 1.645 / sqrt(n - 4), 
+i.e. such that
+n > 4 + (1.645 / (½ * log ((1 + 0.65) / (1 - 0.65)) - ½ * log ((1 + 0.5) / (1 - 0.5))))^2. 
+The least positive integer n satisfying this inequality is 57 
+(Full credit was given to candidates who use n-3 instead of n-4. In this case the final numeric answer will be 56)
+[Total 12]
+%-------------------------%
+\medskip 
+This question was not well answered and for the third consecutive session candidates have not answered Time Series questions as well as expected. A lot of candidates spent valuable exam time deriving the autocorrelation formulae rather than applying them, which the examiners suspect was due to the derivations being consulted during the open-book exam rather than the application of the formulae having been revised beforehand.
+In part \item   the first marks available are for restating the autocorrelation formulae in terms of the ARMA(1,1) model and then proceeding from there.

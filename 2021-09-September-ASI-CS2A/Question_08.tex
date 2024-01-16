@@ -1,0 +1,160 @@
+Q. 8) A sports training team is set up of 50 members. From the training, the candidates either
+get injured or are moved out of the training (injured), or they moved to some other training
+unit (relocated).
+These candidates are observed for a period of 24 months, from the date on which these 50
+were admitted into the training team. The table below shows the number of injuries and
+relocations at different months.
+Month Number of injuries Number of relocations
+2 0 2
+4 0 1
+7 3 0
+8 0 2
+10 3 1
+11 0 2
+14 2 0
+15 0 3
+17 0 1
+18 4 0
+20 5 1
+24 3 0
+The coach of the team wants to estimate the survival function. Calculate the survival
+function at different time intervals using Kaplan-Meier estimate. [8]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+Solution 8:
+j
+t
+n
+d
+w
+lambda = d/n
+1- lambda
+Cumulative survival
+1
+2
+50
+0
+2
+0 / 50
+1 - (0 / 50)
+1
+1
+2
+4
+48
+0
+1
+0 / 48
+1 - (0 / 48)
+1
+1
+3
+7
+47
+3
+0
+3 / 47
+1 - (3 / 47)
+44 / 47
+0.93617
+4
+8
+44
+0
+2
+0 / 44
+1 - (0 / 44)
+44 / 47
+0.93617
+5
+10
+42
+3
+1
+3 / 42
+1 - (3 / 42)
+39/42 * 44/47
+0.869301
+6
+11
+38
+0
+2
+0 / 38
+1 - (0 / 38)
+39/42 * 44/47
+0.869301
+7
+14
+36
+2
+0
+2 / 36
+1 - (2 / 36)
+34/36 * 39/42 * 44/47
+0.821006
+8
+15
+34
+0
+3
+0 / 34
+1 - (0 / 34)
+34/36 * 39/42 * 44/47
+0.821006
+9
+17
+31
+0
+1
+0 / 31
+1 - (0 / 31)
+34/36 * 39/42 * 44/47
+0.821006
+10
+18
+30
+4
+0
+4 / 30
+1 - (4 / 30)
+26/30 * 34/36 * 39/42 * 44/47
+0.711539
+IAI CS2A-0921
+Page 7 of 8
+11
+20
+26
+5
+1
+5 / 26
+1 - (5 / 26)
+21/26 * 26/30 * 34/36 * 39/42 * 44/47
+0.574704
+11
+24
+20
+3
+0
+3 / 20
+1 - (3 / 20)
+17/20 * 21/26 * 26/30 * 34/36 * 39/42 * 44/47
+0.488499
+Range
+S (x)
+1 <= x <7
+1
+7 <= x <10
+0.93617
+10 <= x <14
+0.869301
+14 <= x <18
+0.821006
+18 <= x <20
+0.711539
+20 <= x <24
+0.574704
+x=24
+0.488499
+[8 Marks]

@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+[12]
+Q. 5) In the country of Indiana the testing kits for pandemic Covid-19 are limited in numbers.
+So the Government has decided to test only those citizens who qualify certain criteria.
+Citizens of the country are given a questionnaire and asked for having physical symptoms
+of Covid-19. The questionnaire asked some simple questions like international travel
+history, coming in contact with any positive tested person, any co-morbid conditions. The
+symptom checked were fever, cough, difficulty in breathing, and any other respiratory
+problem persisting since last 3 days. An algorithm is then applied to estimate the number
+of infected persons in the country to augment medical services
+
+In the test, both the questionnaire and the symptoms test are given to 2000 patients whose
+disease status is known. Some results from the test are shown in the table below
+True Status
+Prediction from Symptom Prediction from questions
+Has
+disease
+Does not
+have disease
+Has disease
+Does not have
+disease
+Has disease 900 100 800 200
+Does not have disease 300 700 200 800
+
+%==============================================%
+\item  Find out the correct option for (symptoms, questionnaire) test
+a) Precision: (0.75,0.80) ; Recall: (0.90,0.80), F1 Score: (0.818, 0.80)
+b) Precision: (0.90,0.80) ; Recall: (0.75,0.80), F1 Score: (0.90, 0.80)
+c) Precision: (0.75,0.90) ; Recall: (0.75,0.80), F1 Score: (0.80, 0.90)
+d) Precision: (0.75,0.90) ; Recall: (0.90,0.75), F1 Score: (0.818, 0.90)
+e) None of the above
+(3)
+\item   Show that the F1 score expresses the true positives as a proportion of the true
+positives plus the average of those incorrectly classified. 
+\item    Comment on your result from (\item  and on the usefulness of the test. 
+
+%==============================================%
+
+Solution 5:
+i) Answer – (a) [3]
+ii)
+The F1 score may be written as
+2*[TP/(TP+FP)]*[TP/(TP+FN)]
+[TP/(TP+FP)]+[TP/(TP+FN)]
+IAI CS2A-1120
+Page 6 of 9
+Solving this, we get F1 = TP/(TP+0.5FN+0.5FP)
+This expresses the true positives as a proportion of the true positives plus the average of those
+incorrectly classified.
+[2]
+iii)
+Comments -
+ Compared with questionnaire, the symptom test is better at identifying the true positives
+ But it is not so precise as it classifies as positive a higher proportion of those who do not have the
+disease.
+ Whether recall or precision are chosen as measures will depend on whether it is most important to
+identify all the persons who have the disease, or not to unduly worry and treat people who are diseasefree
+ As the disease is serious it would perhaps be best to maximise the true positives and minimise the
+false negatives and so the clinical procedure would be preferred.
+ In real life, a very large proportion of those tested will not have the disease, so testing equal numbers
+of patients who do and do not have the disease may not be so useful.
+ The F1 score, however, is reasonably robust to the situation where most people do not have the
+disease, as its calculation does not involve the true negatives
+ As the sample size is relatively small, the test should be re-performed on a larger population before
+drawing any firm conclusions.
+ The questionnaire is likely to be easier/cheaper to administer and therefore may be a good short-term
+substitute until the clinical procedure can be established in areas that currently have no screening in
+place.
+[3]

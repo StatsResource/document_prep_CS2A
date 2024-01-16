@@ -1,0 +1,169 @@
+7 A mountain rescue service is looking to introduce a new training programme for
+volunteers who wish to join the service. Each Saturday for 10 weeks trainee rescuers
+are asked to join a mountain climb. Only those who successfully complete the climb
+are invited back the following week.
+The rescue service will recruit those trainees who successfully complete a certain
+number of Saturday climbs. To decide on how many successful weeks should be
+required for a new recruit, the rescue service conducts a trial with 20 volunteers. The
+table below shows how many of these volunteers fail to complete the climb each week
+and the number who are eligible but do not arrive for the beginning of each climb.
+Week Eligible but do
+not arrive
+Arrive but fail to
+complete the climb
+1 0 1
+2 0 2
+3 1 2
+4 0 0
+5 0 1
+6 4 1
+7 0 2
+8 0 1
+9 0 2
+10 0 1
+\item   Explain why the Kaplan–Meier estimate is a suitable way to evaluate this
+training programme. 
+The rescue service would like to recruit 30% of the volunteers who start the
+programme.
+\item   Calculate the number of successful weeks the service should require trainees
+to complete using the Kaplan–Meier estimate. [8]
+\item  Discuss what concerns the rescue service should have about using this study to
+set the recruitment criteria for all future volunteers. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+
+Q7
+\item 
+We have discrete data 
+\begin{itemize
+\item The hazard depends on duration / time 
+\item 
+There is [right] censoring 
+\item 
+There is non-informative censoring 
+\item 
+The data is suited to a non-parametric approach 
+\item 
+Other sensible comment on data suited to K-M approach 
+\end{itemize} 
+
+\item 
+At duration t weeks, let dt be the number who fail the task that week
+ct be the number censored that week
+(see below for application of censoring to this problem)
+nt be the ”risk set” - the number of volunteers still on the program
+then ht is the hazard of failing the task in week t where ht = dt / nt
+
+and the Kaplan Meier survival function is S(t) where
+S(t) = \item 
+The Kaplan Meier estimate assumes that censoring occurs after failure therefore volunteers who do not arrive for week j need to be included in cj-1 not cj 
+t
+nt
+dt
+ct
+ht
+1-ht
+S(t)
+1
+20
+1
+0
+0.05
+0.95
+0.95
+2
+19
+2
+1
+0.105263158
+0.894736842
+0.85
+3
+16
+2
+0
+0.125
+0.875
+0.74375
+4
+14
+0
+0
+0
+1
+0.74375
+5
+14
+1
+4
+0.071428571
+0.928571429
+0.690625
+6
+9
+1
+0
+0.111111111
+0.888888889
+0.613888889
+7
+8
+2
+0
+0.25
+0.75
+0.460416667
+8
+6
+1
+0
+0.166666667
+0.833333333
+0.383680556
+9
+5
+2
+0
+0.4
+0.6
+0.230208333
+10
+3
+1
+0
+0.333333333
+0.666666667
+0.153472222
+\item 
+\item 
+
+\item 
+\item 
+
+We seek the largest t at which S(t) >= 0.3 \item 
+%-------------------------%
+\medskip 
+The number of weeks required is 8 
+\item 
+hazard unlikely to be zero at week 4 \item 
+large amount of censoring between weeks 5 & 6 - would want to investigate why 
+relatively small sample size \item 
+would knowledge of the required number of weeks change behaviour? \item 
+the right censoring may well be informative \item 
+other types of censoring may be present \item 
+different training programs may not be uniformly difficult \item 
+other sensible comments \item 
+(To obtain full marks on this part some discussion of the censoring here is required)
+[Marks 4 available, maximum 3]
+[Total 13]
+This Kaplan Meier Estimate question was reasonably well answered.
+The key to a full correct solution in part \item   and then to a strong answer to part \item  is to understand the role of censoring in this scenario. The ordering of failure and censoring is one of the K-M assumptions and well prepared candidates recognised this in their answers.
+A wide variety of layouts for the calculations and answers in \item   were given full credit. Candidates are reminded of the importance of defining terms when completing survival model calculations.
+Part \item  was less well answered and again asks candidates to apply knowledge of the model to the scenario in the question.

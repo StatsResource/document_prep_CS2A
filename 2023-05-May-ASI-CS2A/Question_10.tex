@@ -1,0 +1,135 @@
+Q. 10)
+For the senior citizen population in a country, a statistician has decided to use the two-factor Lee–Carter model to project future mortality rates and has fitted the model to a set of mortality data.
+\item  Write down the two-factor Lee–Carter model, clearly defining each of the terms you use. Also list out the constraints that are normally imposed, in order for the model to be uniquely specified.
+(3)
+\item   The parameters ax and bx of the model for ages between 60 to 80 (inclusive) are expressed using linear functions as below.
+ax = 0.105x - 10.95
+bx = -0.004x + 0.48
+Further, it is assumed that the factor kt decreases linearly from 2.75 at time 0 to -1.25 at time 40.
+a) Estimate the central mortality rate for ages 60 and 70 and at times 0, 10, 20, 30 and 40.
+
+b) From the results in ii (a) above, comment on the trend in central mortality rate with time for ages 60 and 70.
+(1.5)
+\item   Describe the disadvantages of Lee-Carter Model.
+(2.5)
+[12]
+
+
+Solution 10:
+\item 
+The two-factor Lee-Carter model may be written:
+ln mx,t = ax + bx * kt + 𝜀𝑥,𝑡
+where:
+mx,t is the central mortality rate at age x in year t
+
+ax describes the general shape of mortality at age x or ax is the mean of the time- averaged logarithms of the central mortality rate at age x. 
+bx measures the change in the rates in response to an underlying time trend in the level of mortality of kt.
+
+kt reflects the effect of the time trend on mortality at time t, and
+
+𝜀𝑥,𝑡 are independently distributed normal random variables with means of zero and some variance to be estimated.
+
+The usual constraints imposed in the Lee-Carter Model are that \Sum𝑏𝑥𝑥=1
+and
+\Sum𝑘𝑡𝑡=0
+
+
+\item  
+a) Ignoring error term εx,t, the mortality rate at age x in projection year t is:
+mx,t = exp (ax + bx * kt)
+
+The time trend factor kt is assumed to decrease linearly from 2.75 at time 0 to -1.25 at time 40. Hence, can be expressed as
+kt = 2.75 – 0.1*t
+
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 10 of 14
+Further, parameters ax and bx of the model for ages between 60 to 80 (inclusive) are expressed using linear functions as below.
+ax = 0.105x - 10.95 &
+bx = -0.004x + 0.48
+X
+ax
+bx
+60
+-4.65
+0.24
+70
+-3.6
+0.2
+
+From the above,
+m60,t = exp (a60 + b60*kt)
+= exp(-4.65 + 0.24 *(2.75 – 0.1t))
+= exp (-4.65 + 0.66 – 0.024t)
+= exp (-3.99 – 0.024t)
+
+m60,0 = exp (-3.99) = 0.0185
+m60,10 = exp (-3.99 – 0.24) = exp (-4.23) = 0.014552
+m60,20 = exp (-3.99 – 0.48) = exp (-4.47) = 0.011447
+m60,30 = exp (-3.99 – 0.72) = exp (-4.71) = 0.009005
+m60,40 = exp (-3.99 – 0.96) = exp (-4.95) = 0.007083
+
+Similarly,
+m70,t = exp (a70 + b70*kt)
+= exp(-3.6 + 0.2 *(2.75 – 0.1t))
+= exp (-3.6 + 0.55 – 0.02t)
+= exp (-3.05 – 0.02t)
+
+m70,0 = exp (-3.05) = 0.047359
+m70,10 = exp (-3.05 – 0.2) = exp (-3.25) = 0.038774
+m70,20 = exp (-3.05 – 0.4) = exp (-3.45) = 0.031746
+m70,30 = exp (-3.05 – 0.6) = exp (-3.65) = 0.025991
+m70,40 = exp (-3.05 – 0.8) = exp (-3.85) = 0.02128
+
+[5]
+Alternatively,
+Ignoring error term εx,t, the mortality rate at age x in projection year t is:
+mx,t = exp (ax + bx * kt)
+
+The time trend factor kt is assumed to decrease linearly from 2.75 at time 0 to -1.25 at time 40. Hence, can be expressed as
+kt = 2.75 – 0.1*t
+
+Further, parameters ax and bx of the model for ages between 60 to 80 (inclusive) are expressed using linear functions as below.
+ax = 0.105x - 10.95 &
+bx = -0.004x + 0.48
+mx,t = exp (0.105x - 10.95 + (-0.004x + 0.48)* (2.75 – 0.1*t))
+= exp (0.105x - 10.95 -0.004*2.75x + 0.004*0.1*x*t + 0.48*2.75 -0.048*t)
+= exp (0.105x - 10.95 – 0.011x + 1.32 – 0.048*t +0.0004*x*t)
+= exp (0.094x – 9.63 - 0.048*t +0.0004*x*t)
+
+m60,0 = exp (-3.99) = 0.0185
+m60,10 = exp (-4.23) = 0.014552
+m60,20 = exp (-4.47) = 0.011447
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 11 of 14
+m60,30 = exp (-4.71) = 0.009005
+m60,40 = exp (-4.95) = 0.007083
+
+m70,0 = exp (-3.05) = 0.047359
+m70,10 = exp (-3.25) = 0.038774
+m70,20 = exp (-3.45) = 0.031746
+m70,30 = exp (-3.65) = 0.025991
+m70,40 = exp (-3.85) = 0.02128
+
+[5]
+b) For every year that we project into the future, the mortality rate m60,t is multiplied by a factor of e-0.024 (or 0.9763), i.e. it decreases by approximately 2.4% p.a.
+
+For m70,t, we multiply by a factor of e-0.02 (or 0.9802) for each year that we project into the future and hence the values of m70,t decrease by approximately 2% p.a.
+The percentage reduction in m70,t is smaller than that for m60,t since b70 < b60.
+
+[1.5]
+\item  
+• Future estimates of mortality at different ages are heavily dependent on the original estimates of the parameters ax and bx, which are assumed to remain constant into the future. These parameters are estimated from past data, and will incorporate any roughness contained in the data. In particular, they may be distorted by past period events which might affect different ages to different degrees. 
+• If the estimated bx values show variability from age to age, it is possible for the forecast age-specific mortality rates to ‘cross over’ (such that, for example, projected rates may increase with age at one duration, but decrease with age at the next). 
+• There is a tendency for Lee-Carter forecasts to become increasingly rough over time. 
+• The model assumes that the underlying rates of mortality change are constant over time across all ages, when there is empirical evidence that this is not so. 
+• The Lee-Carter model does not include a cohort term, whereas there is evidence from some countries that certain cohorts exhibit higher mortality improvements than others. 
+• Unless observed rates are used for the forecasting, it can produce ‘jump-off’ effects (ie an implausible jump between the most recent observed mortality rate and the forecast for the first future period). 
+[Max 2.5]
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

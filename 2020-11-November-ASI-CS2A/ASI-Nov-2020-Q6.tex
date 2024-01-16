@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+Q. 6) Individual claims under a certain type of insurance policy are for either 1 or 2. The insurer
+is considering entering into an excess of loss reinsurance arrangement with retention
+1 + k (where $k < 1$). 
+
+Let $X_i$ denote the amount paid by the insurer (net of reinsurance) on the i th claim.
+
+%==============================================%
+\begin{enumerate}
+\item  Calculate and simplify expressions for the mean and variance of Xi. 
+
+
+
+The number of claims in a year follows a Poisson distribution with mean 500 (assume
+α = 0.2). The insurer wishes to set the retention so that the probability that aggregate claims
+in a year will exceed 700 is less than 1%.
+\item   Show that setting k = 0.334 gives the desired result for the insurer. 
+\end{enumerate}
+%==============================================%
+
+
+[8 Marks]
+Solution 6:
+i)
+E(Xt )= α + (1+ k)(1− α)
+= 1+ k(1− α)
+[1]
+Var( Xt )= E(Xi
+2 ) − E(Xi)2
+= α + (1+ k)2 (1−α) − (1+ k(1−α))2
+= α + (1−α) + 2k(1−α) + k2 (1−α) −1− 2k(1−α) – k2(1−α)2
+= k2(1−α)(1− (1−α))
+= k2 α(1−α) [2]
+[3]
+ii)
+Let Y denote the aggregate claims in a year. Then Y has a compound Poisson distribution,
+E(Y)=500 X E(Xi ) = 500 + 500k(1−α) = 500 + 400k =633.60
+[1]
+And
+Var(Y ) = 500× E(Xi
+2 )
+= 500(α + (1+ k)2 (1−α))
+= 500(α + (1−α) + 2k(1−α) + k2 (1−α))
+IAI CS2A-1120
+Page 7 of 9
+= 500 + (1000k + 500k2 )(1−α)
+= 500 + 800k + 400k2 =811.82 [1.5]
+Using a normal approximation
+P(Y>700)=P(Z> [700-E(Y)]/Sq rt(Var(Y)) [1]
+By putting, K=0.334, we get the probability 1% (full marks who derived the 1% probability).
+[1.5]
+[5]
+[8 Marks]
+\end{document}

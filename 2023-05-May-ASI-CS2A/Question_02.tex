@@ -1,0 +1,37 @@
+Q. 2)
+The distribution of the number of claims for a motor portfolio is a type 2 negative binomial with parameters k=3,000 and p =0.85. The distribution of the claim size is Gamma with parameters \alpha = 15 and \lambda = 0.2.
+Calculate the Moment Generating Function, Mean and Standard deviation of the aggregate claim distribution.
+
+
+
+Solution 2:
+Mx(t) = (1-t/0.2)(-15) =(1-5t)(-15)
+MN(t)= {0.85/(1-0.15exp(t))}3000
+
+MGF of aggregate claim:
+Ms(t)= MN (log Mx(t))
+= {0.85/(1-0.15exp(log Mx(t))}^3000
+= {0.85/(1-0.15 Mx(t)}3000
+= {0.85/(1-0.15/(1-5t)(15))} ^ 3000
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 3 of 14
+
+E(X) = \alpha/ \lambda =15 /0.2 = 75
+V(X) = \alpha/ \lambda2
+= 15/0.04 =375 
+E(N) = kq/p = 3000*0.15/0.85 = 529.4118
+V(N) = kq/p2 = 3000*0.15/(0.85)2 = 622.8374
+
+Mean = E(S) = E(X)* E(N) = 75* 529.4118 = 39,705.89
+
+Variance (S) = {E(X)}2 * V(N)+ V(X) * E(N)
+=752*622.8374+ 375 * 529.4118 = 37,01,990
+Standard Deviation = √3701990 =1924.05 
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

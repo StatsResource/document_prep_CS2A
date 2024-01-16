@@ -1,0 +1,64 @@
+2 Country A has recently gone through an economic crisis. As the country makes an
+attempt to recover, the Department of Finance is trying to estimate the rate of
+recovery in employment. The department has decided to use a two-state
+continuous-time Markov model to estimate the rate of return to employment. It has
+also decided to use data from one of the previous economic recoveries for the
+purpose. The two states are:
+The employment data from a previous economic recovery was as follows:
+ Waiting time to gain employment in the first year (in person-years): 30,000
+ Waiting time to gain employment in the second year (in person-years): 22,000
+ Number of people gaining employment in the first year: 5,000
+ Number of people gaining employment in the second year: 7,000
+It may be assumed that force of gaining employment in any 1 year is constant.
+\item   State the likelihood function of the maximum likelihood estimator of the
+transition rate defining all the terms you use. 
+\item   Calculate the maximum likelihood estimate of the transition rate from the state
+of being unemployed to gaining employment for each of the first 2 years. 
+\item  Estimate, by stating the expression, the variance of the second year maximum
+likelihood estimator. 
+\item  Calculate the probability of not gaining any employment in the neX_{t} 2 years.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+Q2
+\item  
+The likelihood function for the ith year \item 
+L (mu_i;di,vi) = exp(-mu_i *vi)* mu_i ^di 
+Where:
+mu_i is the transition rate from unemployed to employed in the ith year \item 
+%-------------------------%
+\medskip 
+di is the number of transitions from state “unemployed” to state “employed”
+in ith year \item 
+vi is the total observed waiting time in State “unemployed” in ith year \item 
+\item  
+Which results in maximum likelihood estimate of:
+mu_i^hat = di / vi
+Therefore,
+mu_1^hat = 5000 /30000 = 0.16667 
+mu_2 ^hat = 7000/22000 = 0.31818 
+\item 
+The maximum likelihood estimator mu_2^hat has a variance equal to:
+Mu2/E[V] 
+Where:
+Mu2 is the true transition rate in the second year
+E[V] is the expected waiting time of being unemployed
+Mu2 \sim = mu_2^hat = 0.31818
+E[V] \sim =v2 = 22000 
+Variance = 0.000014 
+\item 
+Estimating
+P (not getting employed in the neX_{t} 2 years) = 2p0 = exp( - int( o to 2) mu x+s ds) 
+= Exp(-mu1)*exp(-mu2) 
+= 0.8465* 0.7275 \item 
+= 0.61579 \item 
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This question was well answered, and the average mark was the highest across the whole paper.
+In parts \item   and \item   credit was given to candidates who only started to differentiate between years 1 and 2 in the second part, and to candidates who expressed all their answers numerically without full notation. The most common mistake was to calculate a blended transition rate across the two years for which partial credit was given if subsequent calculations proceeded correctly with that rate.

@@ -1,0 +1,22 @@
+[10]
+Q. 10) An insurance company has a portfolio of two-year policies. Aggregate annual claims from
+the portfolio follow an exponential distribution with mean 25. Claims are independent of
+each other. Annual premium of 30 is received under the policies. Premiums under the
+policy are received at the start of the year and all claims are paid at the end of the year.
+Calculate the probability that the insurer is not ruined by the end of the second year,
+assuming the insurer started with zero capital at the start of year 1. [6]
+*********************
+
+
+Solution 10:
+IAI CS2A-0921
+Page 8 of 8
+If X1 and X2 are the aggregate claims in year 1 and 2 respectively.
+To avoid ruin we need, X1 < 30 and (X1 + X2) < 60.
+P (X1 < 30 and X1 + X2 < 60) = ∫𝑓(𝑥)∗𝑃 (𝑋2<60−𝑥)300 𝑑𝑥
+∫125∗ 𝑒𝑥𝑝 (−125𝑥)∗[1−𝑒𝑥𝑝{−125∗(60−𝑥)}]𝑑𝑥300
+∫125∗ 𝑒𝑥𝑝 (−125𝑥)−125∗𝑒𝑥𝑝( −6025)𝑑𝑥300
+−𝑒𝑥𝑝 (−3025)−3025∗ 𝑒𝑥𝑝(−6025)+1
+= 0.589944
+[6 Marks]
+*********************

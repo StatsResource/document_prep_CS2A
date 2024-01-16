@@ -1,0 +1,57 @@
+6 A hydroelectric company is managing a water reservoir created from a dam in a river
+valley. The dam was originally chosen so that the water level would exceed a
+threshold of 50 metres in about 2 days in every 300 days. In these eX_{t}reme events, the
+excess water is left to escape the reservoir so that the water level is kept below the
+safety 50-metre limit.
+It is believed that the daily water level in the reservoir follows an exponential
+distribution with mean \mu.
+\item   Estimate the value of \mu. 
+\item   Determine the expected threshold exceedance of the water level over the
+50-metre threshold. 
+In order to better manage the excess water, it is now assumed that the excess water
+level follows a Generalised Pareto distribution with scale parameter β 􀵌 1.
+\item  Explain the circumstances in which the Generalised Pareto distribution would
+be preferred to the exponential distribution. 
+\item  Estimate the value of the parameter γ if the expected threshold exceedance is
+the same as that in part \item  . 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+
+
+Q6
+\item  
+Since the exponential distribution with parameter \lambda and with expectation \mu=1/\lambda has tail probability
+Exp(-x/ \mu ) then 
+Exp(-50/\mu)=2/300 so
+-50/\mu =log(2/300)=-5.010635 
+So
+\mu=-50/5.010635=9.978775 
+\item   Since the threshold exceedance distribution for the exponential distribution is the same as the original distribution then 
+[or since the exponential distribution is memoryless, then …]
+the random variable U=X-50|X>50 has the same expectation as above, i.e. 9.978775 
+\item  GPD is preferred if eX_{t}reme weather events are becoming more likely 
+and therefore the exceedance distributions are expected to have fatter tails than
+those of the exponential 
+modelling of the tails is seen as more important in a scenario such as this 
+other sensible comments contrasting the GPD and the exponential 
+[Total marks 4, maximum 2]
+\item 
+If beta =1 the Pareto distribution will have expectation the same as the expected exceedance amount
+\gamma /(gamma -1)= 9.978775 
+or
+\gamma = (gamma -1)*9.978775 
+\gamma= 9.978775/(9.978775-1)= 1.111374 
+[Total 10]
+The first three parts of this question on loss distributions is relatively straightforward, so again it is disappointing that these were not well answered.
+Part \item  is more demanding.
+%-------------------------%
+\medskip 
+In part \item   as with other calculation questions in this paper, full credit was awarded for solutions with the correct final numerical answer (9.9878) and some but not each step of working given.
+Full marks were also awarded in \item   for reference to the memoryless property of the exponential distribution.

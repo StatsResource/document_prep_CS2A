@@ -1,0 +1,102 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+Q. 2) The following time series model is used for the daily increase rate in Covid-19 patients
+(Yt) in the country of Indiana
+$$Y t = 0.4Yt-1 + 0.2Yt-2 + Z t + 0.025$$
+Where {Z t} is a sequence of uncorrelated identically distributed random variables whose
+distributions are normal with mean zero.
+
+%==============================================%
+\begin{enumerate}
+\item  Find out the correct option for a, b and c when this model is considered as an ARIMA
+(a, b, c) model.
+a) (0,2,1)
+b) (1,1,0)
+c) (2,0,0)
+d) (2,1,1)
+e) None of the above 
+\item   Determine whether {Y t} is a stationary process. 
+\item    Assuming an infinite history, calculate the expected value of the rate of increase of
+Covid-19 over this. 
+\item  Calculate the autocorrelation function of {Yt} (4)
+\item  Explain how the equivalent infinite-order moving average representation of {Yt} may
+be derived. 
+\item   If Rt follows MA and St = 0.8+0.5t+Rt then prove that the standard deviation of
+first difference of St will be higher than that of Rt. 
+\end{enumerate}
+
+%===========================================================%
+Solution 2:
+i) Answer – (c) [2]
+ii) Roots of characteristic equation are -1+/-sq rt( 6) , which are outside ( -1, +1),
+so {Yt} is stationary. [1.5]
+iii)
+Mean is stationary over time
+(1-0.4-0.20) E [Yt ] =0.025
+So E [Yt ]=0.025/0.4=0.0625 [1]
+iv)
+Yt 0.0625 = 0.4(Yt 1 0.0625) + 0.2(Yt 2 0.0625) + Zt
+ρk = E[(Yt -0.0625)(Yt-k -0.0625)]=0.4 ρk-1 + 0.2 ρk-2
+[2]
+Put k=1 , and note that ρ0 =1 and ρ-1 = ρ1
+Therefore
+ρ1 =0.4+0.2 ρ1 => ρ1 =0.5
+ρ2 =0.4 ρ1 + 0.2 =0.4
+ρ3 = 0.4 ρ2 + 0.2 ρ1 =0.26
+and so on [2]
+[4]
+IAI CS2A-1120
+Page 3 of 9
+v)
+(1-0.4B-0.2B2)(Yt -0.0625)= zt
+Yt -0.0625 =(1-0.4B-0.2B2)-1 Zt
+Invert (1-0.4B-0.2B2) and multiply by Zt to obtain equivalent moving average process. 
+
+%=========================================%
+vi)
+Rt follows MA(1), hence we can write
+𝑅􀯧 = 𝑒􀯧 + 𝛽𝑒􀯧􀬿􀬵,Where ~ 0, 2  t e 
+Now, 𝑣𝑎𝑟(𝑅􀯧 ) = 𝑣𝑎𝑟(𝑒􀯧 + 𝛽𝑒􀯧􀬿􀬵)
+var( ) var( ) 1
+2
+   t t e  e 
+ (1  2 ) 2……………………………………………………………………………..(1) 
+Now, 𝛥𝑆􀯧 = (0.8 + 0.5𝑡 + 𝑅􀯧) − [0.8 + 0.5(𝑡 − 1) + 𝑅􀯧􀬿􀬵]
+= 0.5 + (𝑅􀯧 − 𝑅􀯧􀬿􀬵) 
+Hence𝑣𝑎𝑟( 𝛥𝑆􀯧 ) = [𝑐𝑜𝑣( 𝑅􀯧 − 𝑅􀯧􀬿􀬵, 𝑅􀯧 − 𝑅􀯧􀬿􀬵)] 
+= [2𝛾􀯋 (0) − 𝛾􀯋 (−1) − 𝛾􀯋 (1)] ………………………………………………………………..(2) 
+∴ 𝑁𝑜𝑤, 𝛾􀯋 (0) = (1 + 𝛽􀬶)𝜎􀬶
+And, 𝛾􀯋(1) = 𝛾􀯋(−1) cov( , ) 1 1    t t t t e e e e   2 [0.5+ 0.5]
+Therefore, from (2) we get,
+𝑣𝑎𝑟( 𝛥𝑆􀯧) = [2(1 + 𝛽􀬶)𝜎􀬶 − 2𝛽𝜎􀬶]  21    2  2 [1]
+Now, 𝑣𝑎𝑟( 𝛥𝑆􀯧 ) − 𝑣𝑎𝑟( 𝑅􀯧 )
+ [2  2  2 2 ] 2  (1   2 ) 2 
+ [1 2  2 2 ] 2 
+ (1  2 ) 2  0 
+Hence the standard deviation of first difference of St is higher than that of Rt 
+[6]
+[16 Marks]

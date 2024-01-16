@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+Q. 3) The life insurance company performing the analysis current experience (5 years) with
+population for its maximum selling age group of 30-39 years
+\item  Based on below data please test the hypothesis that the company’s experience is in
+line with population.
+Age
+Exposed to
+risk
+Actual
+Deaths
+Population
+mortality
+30 2,921 5 0.001605
+31 4,040 6 0.001652
+32 3,855 7 0.001712
+33 4,640 7 0.001787
+34 4,822 9 0.001875
+35 5,583 10 0.001980
+36 6,013 13 0.002104
+37 5,911 12 0.002247
+38 5,657 13 0.002412
+39 5,219 14 0.002603
+a) Calculate the test statistic (4)
+b) State degrees of freedom (0.5)
+c) State upper tail value of the Chi-square distribution with calculated degrees of
+freedom at 95% (0.5)
+d) Conclusion on the hypothesis tested 
+\item   Perform signs test by stating n, p and x. State the p-value and conclusion whether the
+Null hypothesis of positive deviations is having binomial distribution. (4)
+
+
+%==============================================%
+Solution 3:
+i) The Null Hypothesis is that the company’s experience is in line with population
+a)
+Age Observed (O) Expected ( E) = Population mortality* Exposed to risk (O-E)^2 (O-E)^2/E
+30 5 4.688205 0.097216 0.020736
+31 6 6.67408 0.454384 0.068082
+32 7 6.59976 0.160192 0.024272
+33 7 8.29168 1.668437 0.201218
+34 9 9.04125 0.001702 0.000188
+35 10 11.05434 1.111633 0.100561
+36 13 12.65135 0.121555 0.009608
+37 12 13.28202 1.643568 0.123744
+IAI CS2A-1120
+Page 4 of 9
+38 13 13.64468 0.415617 0.03046
+39 14 13.58506 0.172178 0.012674
+Total 96 99.51243 5.846482 0.591544
+Test statistic = 0.59 [4]
+b) Degrees of freedom = 10 
+c) upper tail value of the Chi-square distribution with 10 degrees of freedom at 95% is 18.31 
+d) The company’s experience is in line with population as there is not sufficient evidence to reject the
+null hypothesis. 0.59 < 18.31 [1]
+ii)
+No. of positive = 4
+N = total no. of groups analysed = 10
+P follows Binomial (10,1/2)
+2*P(P<= 4) = 2*0.3770
+[2]
+Page 187 of tables by looking up n=10, p=0.5, x=4
+p-value = 0.3770 [1]
+Since p-value is greater than 5%, it is not significant. [1]
+[4]
+[10 Marks]
+
+\end{document}

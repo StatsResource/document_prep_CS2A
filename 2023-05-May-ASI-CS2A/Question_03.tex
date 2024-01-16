@@ -1,0 +1,36 @@
+Q. 3)
+In an actuarial student program, the number of years students stay in the program is distributed as follows:
+1 year 0.85
+2 years 0.60
+3 years 0.55
+4 years 0.45
+The distribution of the amount of time in the program after 4 years has probability density function f(t) = \mu*e(-\mu*t), with \mu selected to match the 0.45 probability of staying in the program 4 years.
+Determine the average number of full years that students stay in the program.
+[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Solution 3:
+The life expectancy at entry is e0 = \Sum𝑘𝑝0∞𝑘=1 
+After four years, the survival rate is 0.45, and
+S0(4) = \int𝑓(𝑡)ⅆ𝑡∞4=\int\mu𝑒−\mu𝑡ⅆ𝑡∞4=ⅇ−4\mu
+Therefore ⅇ−4\mu=0.45
+\mu = -0.25* ln 0.45 = 0.2
+
+For k >= 4,
+kp0 = \int\mu𝑒−\mu𝑡ⅆ𝑡∞𝑘=ⅇ−𝑘\mu = 0.45(k/4)
+
+So e0 = 0.85 + 0.60 + 0.55 + \Sum0.45𝑘∕4∞𝑘=4
+
+= 2 + 0.451−0.45(14⁄) (From sum of a geometric series = a/(1-r))
+
+= 2 + 2.4867
+= 4.4867 years 
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,52 @@
+Q. 4) An insurance portfolio contains policies for three categories of policyholder: A, B and C.
+The number of claims in a year, N, on an individual policy follows a Poisson distribution
+with mean \lambda. Individual claim sizes are assumed to be exponentially distributed with mean
+4 and are independent from claim to claim. The distribution of \lambda, depending on the
+category of the policyholder, is
+Category Value of \lambda Proportion of policyholders
+A 2 0.2
+B 3 0.6
+C 4 0.2
+If the total claim amount denoted by a policyholder in one year is S
+\item Prove that E(S)=E[E(S|\lambda)] 
+\item Show that E (S|\lambda)=4 \lambda and Var(S|\lambda) =32 \lambda 
+\item Calculate E(S) 
+\item Calculate Var(S) 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Solution 4:
+i)
+Let f (s) denote the marginal probability density for S and let f (s/\lambda) denote the conditional probability density for S/ \lambda. Then
+E[E(S/ \lambda)]= \Sum𝑝(\lambda𝑖)3
+𝑖=1∫sf(s\lambda)ds∞0
+=∫\Sum𝑝(\lambda𝑖)3
+𝑖=1∞0 sf(s\lambda)ds
+But \Sum𝑝(\lambda𝑖)3
+𝑖=1f(s\lambda) = f(s) by definition
+So
+E[E(S/ \lambda)]= ∫𝑠𝑓(𝑠)𝑑𝑠=𝐸(𝑆)∞0
+(2)
+ii)
+Using the results for compound distributions, we have:
+E(S/\lambda)= E(N/\lambda)* E(X/\lambda)= E(N/\lambda)* E(X)=4\lambda
+Var(S/\lambda)= E(N/\lambda)* Var(X)+ Var(N/\lambda)* E(X)2
+=\lambda*16+\lambda*4*4
+=32\lambda
+(2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+iii)
+E(S)=E[E(S/\lambda)]= E(4\lambda)=4E(\lambda)=12
+(2)
+iv)
+Note that E(\lambda)= 3 \lambda = and
+Var(\lambda)=0.2x22 + 0.6X32 +0.2x42 -9=0.4
+Var(S)=Var[E(S/\lambda)] +E[Var(S/\lambda)]
+=Var(4\lambda)+E(32\lambda)
+=16xVar(\lambda) +32E(\lambda)
+=16x0.4+32x3
+=102.4
+(2)
+[8 Marks]
+IAI CS2A-0921
+Page 4 of 8

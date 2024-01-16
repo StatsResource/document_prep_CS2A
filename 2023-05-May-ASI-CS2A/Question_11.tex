@@ -1,0 +1,74 @@
+Q. 11)
+\item  An insurer believes that claims from a particular type of policy follow an exponential distribution with mean 1000. The insurer wishes to introduce a policy excess so that 25% of losses result in no claim to the insurer. Calculate the size of the excess.
+
+\item   The insurer effects an individual excess of loss reinsurance treaty with a retention limit of 400. Calculate the insurer’s expected payment per claim.
+(3)
+\item   Next year, the claim amounts on these policies are expected to increase by 10% but the reinsurance treaty will remain unchanged. Calculate the reinsurer’s expected claim pay- out next year on claims in which it is involved.
+(3)
+[8]
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solution 11:
+\item 
+If ‘X’ represents claims from the particular policy of the insurer, we know that X is exponential with mean 1000.
+So, parameter of X , \lambda= 1/1000.
+Let L be the size of the excess. The insurer wants to set L so that P(X<L) = 0.25.
+Using the given loss distribution,
+➔ P(X<L)= 1- e-\lambdaL = 1- e-1/1000L
+
+➔ 1- e-1/1000L = 0.25
+e-1/1000L = 0.75
+-1/1000L = ln(0.75)
+= - 0.28768
+L = 287.68
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 12 of 14
+[1.5]
+
+\item  
+Let X denotes the individual claim amount random variable. X follows exp(1/1000)
+Let Y denotes the amount of claim paid by the insurer. Then:
+Y = X ; if X <= 400
+=400 ; if X > 400
+
+So
+\intx f(x)ⅆ𝑥4000 + \intx f(x)ⅆ𝑥∞400
+=\intx∗ 1/1000∗exp(−11000𝑥 )ⅆ𝑥4000+ \int400∗ 1/1000∗exp(−11000𝑥 )ⅆ𝑥∞400
+
+= 1/1000 * ([ x* exp (-1/1000x /-1/1000)] ( from 0 to 400 )
+– 1/100 * \intexp(−11000𝑥 )1∗ −1000 ⅆ𝑥4000+
+400∗1000∗ \int∗exp(−11000)ⅆ𝑥∞400
+=-400*exp(-400/1000)+ \int∗exp(−𝑥1000)ⅆ𝑥4000+ \int400∗ 1/1000∗exp(−11000𝑥 )ⅆ𝑥∞400
+= -400* exp( -0.4) – 1000* (exp( -0.4) -1) + 400/1000* -1000{ exp(-∞) – exp( -0.4)
+=-400*exp(-0.4)+1000*(1-exp(-0.4))+400*(0 – exp( -0.4))
+= 1000( 1- exp( -0.4))
+= 1000* (1- .67032) = 329.68
+[1.5]
+[Max 3]
+\item  
+Let Z’ denotes the reinsurer’s claim payment random variable next year.
+Y = X ; if 1.1X <= 400 ie. If X<= 400/1.1
+=1.1 *400 ; if 1.1 X > 400 is if X> 400/1.1
+
+E(Z’)=\int(1.1x−400) f(x)ⅆ𝑥∞4001.1
+=\int(1.1x−400)∗11000∗exp (−x1000)ⅆ𝑥∞4001.1
+
+= 1.11000\intx ∗exp (−x1000)ⅆ𝑥 ∞4001.1+0.4*1.1/1000* \intexp (−x1000)ⅆ𝑥 ∞4001.1
+
+= 1.11000 * -1000* x * exp(−x1000) { from 1.11000 to ∞} + 1.1 \intexp(−x1000)ⅆ𝑥 ∞4001.1 - 0.4 * 1.11000* (-1000)* exp(−x1000) { from 1.11000 to ∞}
+= 400 * (exp(−0.41.1) -1100* ( 0- exp (−0.41.1)) -400 * (0- exp(−0.41.1)
+
+= 400* exp(-0.36364) +1100 * exp( -0.36364) +400* (0 – exp(0.36364)
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 13 of 14
+= 1100* exp(-0.36364)
+= 1100* 0.695144 =764.6583
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
