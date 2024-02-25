@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+5 Let Xt be the process defined by:
+𝑋􀯧 􀵌 􀷍𝑌 􀯜
+􀯧
+􀯜􀭀􀬵
+where:
+𝑌􀯧 􀵌 𝑒􀯧 􀵅 𝑏𝑒􀯧􀬿􀬵
+and et is a sequence of independent and identically distributed $N(0, \sigma^2)$ random
+variables.
+\begin{enumerate}[(a)]
+\item State the values of $p$, $d$ and $q$ for which $X_t$ is an ARIMA(p, d, q) process. 
+\item Demonstrate that var(Yt) = (1 + b2) \sigma^2 and cov(Yt, Yt−1) = b\sigma^2. 
+\item Demonstrate that
+var􁈺𝑋􀯧􁈻 􀵌 𝑡􁈺1 􀵅 𝑏􀬶􁈻\sigma􀬶 􀵅 2􁈺𝑡 􀵆 1􁈻𝑏\sigma􀬶
+and that
+cov􁈺𝑋􀯧, 𝑋􀯧􀬿􀯞􁈻 􀵌 􁈺𝑡 􀵆 𝑘􁈻􁈺1 􀵅 𝑏􀬶􁈻\sigma􀬶 􀵅 􁈺2􁈺𝑡 􀵆 𝑘􁈻 􀵆 1􁈻𝑏\sigma􀬶
+for 0 < k < t. [6]
+\item Explain what the results in part(a) imply about the shape of the
+autocorrelation function of Xt. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+(i)
+p = 0, d = 1, q = 1 
+(ii)
+var(Y_t) = var(e_t + b * e_t-1)
+= var(e_t) + b ^ 2 * var(e_t-1) + 2 * b * cov(e_t, e_t-1) 
+= sigma ^ 2 + b ^ 2 * sigma ^ 2 + 2 * b * 0 
+= (1 + b ^ 2) * sigma ^ 2 
+
+\begin{eqnarray*}
+cov(Y_t, Y_t-1) &=& cov(e_t + b * e_t-1, e_t-1 + b * e_t-2)\\
+&=&  cov(e_t, e_t-1) + b * cov(e_t, e_t-2) + b * cov(e_t-1, e_t-1) + b ^ 2 * cov(e_t-1, e_t-2) \\
+&=&  0 + b * 0 + b * sigma ^ 2 + b ^ 2 * 0 \\
+&=&  b * sigma ^ 2 \\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+Note that var(X_t) is the same as cov(X_t, X_t-k) for k = 0 
+cov(X_t, X_t-k) = cov(sum(1, t): Y_i, sum(1, t - k): Y_j)
+= sum(1, t): sum(1, t - k): cov(Y_i, Y_j) 
+The double sum contains t - k terms with j = i 
+t - k - 1 terms with j = i + 1 
+and t - k terms with j = i - 1 
+unless k = 0, in which case there are t - k - 1 terms with j = i - 1 
+Hence if k > 0, then cov(X_t, X_t-k) = (t - k) * (1 + b ^ 2) * sigma ^ 2
++ (t - k - 1) * b * sigma ^ 2 + (t - k) * b * sigma ^ 2 
+= (t - k) * (1 + b ^ 2) * sigma ^ 2 + (2 * (t - k) - 1) * b * sigma ^ 2 
+If k = 0, then cov(X_t, X_t-k) = var(X_t) = (t - k) * (1 + b ^ 2) * sigma ^ 2
++ (t - k - 1) * b * sigma ^ 2 + (t - k - 1) * b * sigma ^ 2 
+= t * (1 + b ^ 2) * sigma ^ 2 + 2 * (t - 1) * b * sigma ^ 2 
+Overall, this question was very poorly answered, particularly parts \item and (iii).
+Part \item was well answered.
+In part \item candidates that recognised the Binomial nature of the problem were rewarded with more marks available the more reasoning was given. This question is an excellent example of the application of statistical techniques covered in the Core Reading to a novel problem. These questions do require candidates spend some time thinking through the problem and structuring an answer and the examination papers.
+\newline
+(iv)
+The autocorrelation at lag k is cov(X_t, X_t-k) / var(X_t) 
+Hence the results show that the autocorrelation decreases 
+
+
+\end{document}

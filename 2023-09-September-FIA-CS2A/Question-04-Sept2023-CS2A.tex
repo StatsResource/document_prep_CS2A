@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+4 A teacher is looking for ways to cluster her pupils into homogenous groups and
+decides to set up an experiment as follows.
+Each day, every pupil is given a task and scores ‘+2’ if the task is successfully
+completed by the end of the day and ‘−2’ otherwise. This experiment runs for n days
+(n > 1) and at the end pupils are grouped based on their total score over n days.
+Let us consider a pupil in the class who has a 50% chance of successfully completing
+the task each day, and we assume that their performance from day to day is
+independent. We denote by Zt this pupil’s score at the end of day t, and by At their
+total score from day 1 to day t.
+\item Determine the expected value and variance of At. 
+\item Determine the probability that An = k where k is an integer, writing your
+answer as a function of n and k. 
+At the end of the experiment, a pupil will be classified as ‘borderline’ if their total
+score, An, is zero.
+\item Determine Pr(A1 = 2 | An = 0) that is the conditional probability that the pupil
+scored +2 on the first day given they finish with a borderline classification.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+(i)
+A_t = sum(i=1 to t) Z_i 
+E[A_t] = sum(i=1 to n) E[Z_i] = 0 
+Var(A_t) = sum(i=1 to n) Var(Z_i)
+= sum(i=1 to t) { 2^2 x 0.5 + 2^2 x 0.5) = 4t 
+(ii)
+There are 2^n paths the score may take and each one has equal probability 
+In order for A_n = k there must be non-negative integers p and m
+where p is the number of ‘+2’ and m the number of ‘-2’ such that
+p + m = n, and
+This question was generally well answered and is a relatively straightforward application of stochastic processes. The matrix approach, correctly applied, provides the most straightforward route to answering the whole question whereas the combination of individual direct-route probability calculations was more prone to error.
+\newline
+2(p – m) = k 
+that is
+p = (2n + k)/4
+m = (2n – k)/4 
+The number of ways to arrange these p and m results is
+􁉀𝑝𝑝+𝑚𝑚𝑝𝑝􁉁 = 􁉀𝑛𝑛(2𝑛𝑛+𝑘𝑘)/4􁉁 
+Hence
+Pr(A_n = k) = 􁉀𝑛𝑛(2𝑛𝑛+𝑘𝑘)/4􁉁/2𝑛𝑛 
+(iii)
+Pr(A_1 = 2 | A_n = 0) = Pr(𝐴𝐴𝑛𝑛=0 |𝐴𝐴1=2) 𝑥𝑥 Pr (𝐴𝐴1=2)Pr(𝐴𝐴𝑛𝑛=0) 
+now Pr(A_1 = 2) = ½ and 
+Pr(A_n = 0) = 􀵬𝑛𝑛𝑛𝑛2􀵰/2𝑛𝑛 
+for Pr(A_n = 0 | A_1 = 2) there are 2^(n-1) paths the score may take after A_1 = 2
+we need non-negative p’ and m’ where p’ is the number of +2 and m’ the number of -2
+then
+p’ + m’ = n -1
+m’ – p’ = 1
+so
+m’ = n/2 and p’ = n/2 – 1 
+The number of ways to arrange these p’ and m’ results is
+􁉀𝑝𝑝′+𝑚𝑚′𝑝𝑝′􁉁 = 􀵬𝑛𝑛−1𝑛𝑛2−1􀵰 
+so
+Pr(A_n = 0 | A_1 = 2) = 12 𝑥𝑥 􁉆𝑛𝑛−1𝑛𝑛2−1
+􁉇/
+2
+𝑛𝑛−
+1
+􁉆𝑛𝑛𝑛𝑛2
+􁉇/2𝑛𝑛 = 􁉆𝑛𝑛−1𝑛𝑛2−1
+􁉇􁉆𝑛𝑛𝑛𝑛2􁉇 
+= ½ n /n = 0.5 
+[Total 11]
+Alternatively full marks are available for a full reasoning out of 0.5 in words: This reasoning would include the following or similar,
+• the first outcome is either a pass or a fail.
+• the number of routes to a final score of 0 at time n if the first outcome is pass,
+• is the same as the number of routes to a final score of 0 at time n if the first is a fail.
+• due to symmetry of the success / fail pathways.
+• the success / failure probability for the first outcome is ½.
+• therefore the required probability must be 0.5.
+\newline

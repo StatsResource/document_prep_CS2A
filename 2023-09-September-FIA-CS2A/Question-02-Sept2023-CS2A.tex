@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2 Let Xn be a sequence of independent and identically distributed random variables.
+
+\begin{enumerate}[(a)]
+\item Demonstrate that the distribution function of the Xn, F, satisfies:
+􀵫𝐹􁈺\beta􀯡𝑥 􀵅 α􀯡􁈻􀵯􀯡 􀵌 􁉆1 􀵆
+1
+𝑛
+􀵬1 􀵅
+𝐶􁈺𝑥 􀵆 𝐴􁈻
+𝐵
+􀵰
+􀬿􀬵/􀮼
+􁉇
+􀯡
+over the range of possible values of the Xn, in the following cases:
+(a) Xn is uniformly distributed on [0,1], αn = 1 − 1/n, \betan = 1/n, A = 0, B = 1
+and C = −1.
+(b) Xn has the two-parameter Pareto distribution with parameters δ and \lambda,
+αn = \lambda(n1/δ − 1), \betan = n1/δ, A = 0, B = \lambda/δ and C = 1/δ.
+[6]
+\item Explain the significance of your results in part \item by considering the limiting
+behaviour of the right-hand side as n → ∞. 
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+Q2
+(i)(a)
+(F(beta_n * x + alpha_n)) ^ n
+= (beta_n * x + alpha_n) ^ n 
+= (x / n + 1 – 1 / n) ^ n 
+= (1 – 1 / n * (1 – x)) ^ n 
+= (1 – 1 / n * (1 + C * (x – A) / B) ^ -(1 / C)) ^ n 
+(i)(b)
+(F(beta_n * x + alpha_n)) ^ n
+= (1 – (lambda / (lambda + beta_n * x + alpha_n)) ^ delta) ^ n 
+= (1 – ((lambda + beta_n * x + alpha_n) / lambda) ^ -delta) ^ n 
+= (1 – ((lambda * n ^ (1 / delta) + n ^ (1 / delta) * x) / lambda) ^ -delta) ^ n 
+= (1 – 1 / n * (1 + x / lambda) ^ -delta) ^ n 
+= (1 – 1 / n * (1 + C * delta * x / lambda) ^ -(1 / C)) ^ n 
+= (1 – 1 / n * (1 + C * (x – A) / B) ^ -(1 / C)) ^ n 
+(For both (a) and (b) the candidate can obtain marks either by starting with LHS of the equations in the question and substituting in the CDF of the uniform / pareto to obtain the RHS or they can start with the RHS and apply the values of A,B,C to obtain the uniform / pareto CDFs. In either case at least two lines of working are required beyond the initial substitution to “demonstrate” as the question asks)
+(ii)
+The LHS is the probability that the block maximum of n observations is less than or equal to beta_n * x + alpha_n 
+This question was generally well-answered.
+There are a number of correct routes to solutions for parts \item and \item and all are able to receive full credit. 
+The Gompertz calculations are all quite straightforward. Most candidates completed these in a spreadsheet and then pasted them into their answer document with the addition of appropriate explanations and assumptions.
+Where candidates were not awarded many marks,, the most common reason was not reading the question carefully.
+\newline
+
+since the block maximum is less than or equal to beta_n * x + alpha_n if and only if all the observations are less than or equal to beta_n * x + alpha_n 
+As n tends to infinity, the RHS tends to exp(-1 / n * (1 + C * (x – A) / B) ^ -(1 / C)) 
+which is the distribution function of the generalised extreme value (GEV) distribution 
+We have therefore shown that the distribution of a linear function of the block maximum approaches a GEV distribution as n tends to infinity 
+we can use (1+x/n)^n tends to exp(x) as n tends to infinity 
+In part (i)(a), the value of C is negative 
+which indicates that the GEV distribution is of Weibull type 
+This is as expected since the uniform distribution has a finite upper limit 
+In part (i)(b), the value of C is positive 
+which indicates that the GEV distribution is of Fréchet type 
+This is as expected since the Pareto distribution has a heavy tail 
+[Marks available 9, maximum 8]
+(½ mark available for other generalised sensible comments, and 1 mark available for other GEV related comments)
+
+\end{document}

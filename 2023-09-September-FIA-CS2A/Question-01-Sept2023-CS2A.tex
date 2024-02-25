@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1 A leap year is a calendar year which has 366 days including 29 February. This occurs
+once every 4 years and the most recent leap year was 2020. A group of people who
+were born on 29 February in different leap years meet for dinner once every 4 years
+when it is a leap year to celebrate their unusual birthdays. The number of people at the
+dinner on 29 February 2020 was recorded by their year of birth as follows:
+Year of birth 1948 1952 1956
+Number attending 3 8 18
+One of the group decides to estimate the survival of group members using Gompertz
+Law with the force of mortality at age x given by:
+μ􀯫 􀵌 0.0045 􁈺1.0004􁈻􀯫
+\item Comment on the choice of formula for the force of mortality. 
+\item Calculate the expected number of people that will be at the next dinner stating
+any assumptions you make. [5]
+A new member, born on 29 February 1960, asks to join the group.
+\item Calculate the expected cost of dinners for this member up to and including
+29 February 2040 if each dinner costs £60 per person and ignoring interest
+and inflation. [6]
+[Total 13]
+
+Q1
+(i)
+Gompertz Law is a relatively simple expression for the force of mortality 
+It has been found to work well at older ages 
+In 2020 this group were aged 64 to 72 
+A Makeham form with a non-age related element might be slightly better 
+The formula contains and exponential element to mortality 
+The value of c in this Gompertz expression is relatively small 
+Hence mortality increases relatively slowly with age 
+[Marks available 3½, maximum 2]
+(ii)
+assuming that the force of mortality is constant for each year of age 
+we can find one year survival probabilities by exp(-mu_x) 
+and four year survival probabilities by chaining together for 4 years 
+then expected number at the next dinner
+= 3 * 4_p_72 + 8 * 4_p_68 + 18 * 4_p_64 
+The mu_x and p_x calculations are:
+age
+mu_x
+exp(-mu_x)
+64
+0.004617
+0.995394
+65
+0.004619
+0.9953921
+66
+0.00462
+0.9953903
+67
+0.004622
+0.9953885
+68
+0.004624
+0.9953866
+69
+0.004626
+0.9953848
+70
+0.004628
+0.9953829
+71
+0.00463
+0.9953811
+72
+0.004631
+0.9953793
+73
+0.004633
+0.9953774
+74
+0.004635
+0.9953756
+75
+0.004637
+0.9953737
+
+giving expected number
+= 18* 0.981692 + 8 * 0.981663 + 3* 0.981634
+= 28.47 people 
+Alternative solution using the formula for t_p_x in the Gompertz found in the Core Reading (the formula can be stated and does not need to be derived)
+Using the formula on page 32 of the Core Reading:
+4p72 = g ^(c^72 ( c^4-1))
+where g = exp(-0.0045 / log(1.0004)) = 0.000012978
+and c = 1.0004
+\newline
+So:
+4p72 = 0.9816302
+Similarly:
+4p68 = g ^(c^72 ( c^4-1)) = 0.9816593
+4p64 = g ^(c^72 ( c^4-1)) = 0.98168
+So expected number is: 0.9816302 * 3 + 0.9816593 * 8 + 0.9816883 * 18
+= 28.46855
+(full marks are available for other alternative approaches correctly evaluated)
+(iii)
+the new member is age 60 in 2020
+there are dinners in 2024 / 28 / 32 / 36 / 40 
+therefore expected cost
+= 60 * (4_p_60 + 8_p_60 + 12_p_60 + 16_p_60 + 20_p_60 ) 
+again assuming constant force of mortality during each year
+and that the same Gompertz formula can be applied to the new entrant 
+the mu_x and p_x are given by
+age
+mu_x
+exp(-mu_x)
+60
+0.004609
+0.9954013
+61
+0.004611
+0.9953995
+62
+0.004613
+0.9953977
+63
+0.004615
+0.9953958
+64
+0.004617
+0.995394
+65
+0.004619
+0.9953921
+66
+0.00462
+0.9953903
+67
+0.004622
+0.9953885
+68
+0.004624
+0.9953866
+69
+0.004626
+0.9953848
+70
+0.004628
+0.9953829
+71
+0.00463
+0.9953811
+72
+0.004631
+0.9953793
+73
+0.004633
+0.9953774
+74
+0.004635
+0.9953756
+75
+0.004637
+0.9953737
+76
+0.004639
+0.9953719
+77
+0.004641
+0.99537
+78
+0.004643
+0.9953682
+79
+0.004644
+0.9953663
+
+then
+4_p_60 = 0.981721
+4_p_64 = 0.981692
+\newline
+4_p_68 = 0.981663
+4_p_72 = 0.981634
+4_p_76 = 0.981605
+expected cost = 60 * (0.981721 + (0.981721)(0.981692) +
+(0.981721)(0.981692)(0.981663) + (0.981721)(0.981692)(0.981663)(0.981634)
++ (0.981721)(0.981692)(0.981663)(0.981634)(0.981605) 
+= 60 * 4.731859 = £283.91 
+[Total 13]

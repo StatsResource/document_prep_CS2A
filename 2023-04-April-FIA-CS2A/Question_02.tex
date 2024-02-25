@@ -1,3 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 2 Country A has recently gone through an economic crisis. As the country makes an
 attempt to recover, the Department of Finance is trying to estimate the rate of
 recovery in employment. The department has decided to use a two-state
@@ -10,14 +36,15 @@ The employment data from a previous economic recovery was as follows:
  Number of people gaining employment in the first year: 5,000
  Number of people gaining employment in the second year: 7,000
 It may be assumed that force of gaining employment in any 1 year is constant.
+\begin{enumerate}
 \item   State the likelihood function of the maximum likelihood estimator of the
 transition rate defining all the terms you use. 
 \item   Calculate the maximum likelihood estimate of the transition rate from the state
 of being unemployed to gaining employment for each of the first 2 years. 
 \item  Estimate, by stating the expression, the variance of the second year maximum
 likelihood estimator. 
-\item  Calculate the probability of not gaining any employment in the neX_{t} 2 years.
-
+\item  Calculate the probability of not gaining any employment in the next 2 years.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Solutions}
 
@@ -60,5 +87,5 @@ P (not getting employed in the neX_{t} 2 years) = 2p0 = exp( - int( o to 2) mu x
 = 0.61579 \item 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-This question was well answered, and the average mark was the highest across the whole paper.
-In parts \item   and \item   credit was given to candidates who only started to differentiate between years 1 and 2 in the second part, and to candidates who expressed all their answers numerically without full notation. The most common mistake was to calculate a blended transition rate across the two years for which partial credit was given if subsequent calculations proceeded correctly with that rate.
+% This question was well answered, and the average mark was the highest across the whole paper.
+% In parts \item   and \item   credit was given to candidates who only started to differentiate between years 1 and 2 in the second part, and to candidates who expressed all their answers numerically without full notation. The most common mistake was to calculate a blended transition rate across the two years for which partial credit was given if subsequent calculations proceeded correctly with that rate.
