@@ -1,0 +1,120 @@
+Q. 10)
+In the Country of Electronia, only 1 type of vehicle is used. The Government wanted to introduce electronic vehicle and thus a small scale study was conducted to analyse the performance of batteries. The initial study was conducted using 12 batteries, all the batteries were charged uniformly for 6 hours and then run them till discharge everyday. The batteries were tested for failing. The test was terminated by the Government after failure of the 8th Battery after 34th month. The details of battery failures were reported as below:
+• 2 batteries had failed after 22nd month
+• 3 further batteries failed after 29th month
+• 2 further batteries failed after 32nd month
+• 1 further battery failed after 34th month
+Additionally, 1 battery exploded after 30th month.
+\item State with reason the type of censoring present in this study.
+(2)
+\item Calculate the Kaplan-Meier estimate of the survival function based on the data provided above.
+(3)
+\item Additionally, assuming Government increases the sample size also calculate approximate 95% confidence interval for 𝑆̃(33). 
+To estimate var[𝑆̃(33)], state and use Greenwood’s formula.
+(4)
+iv) State the assumptions made for above.
+(1)
+[10]
+**********************
+
+Solution 10:
+\item
+Random censoring as the time of test termination is not known in advance
+Right censoring as the test is cut short after discharge of 8 batteries
+Type II censoring as the predetermined count of failures lead to termination of test
+
+\item
+j
+tj
+dj
+cj
+nj
+\lambdaj = dj/nj
+1- \lambdaj = (nj-dj)/nj
+\pi 1−𝜆𝑗𝑛𝑡𝑗\leq 𝑡
+1
+22
+2
+0
+12
+2/12
+10/12
+10/12
+2
+29
+3
+0
+10
+3/10
+7/10
+7/12
+3
+32
+2
+1
+6
+2/6
+4/6
+7/18
+4
+34
+1
+0
+4
+¼
+¾
+7/24
+The Kaplan-Meier estimate is then
+𝑆̂(𝑡)= \pi 1−𝜆𝑗𝑛𝑡𝑗\leq 𝑡 =
+t 𝑆̂(𝑡)
+0 \leq  t < 22 1
+22 \leq  t < 29 10/12
+29 \leq  t < 32 7/12
+32 \leq  t <34 7/18
+34 \leq  t 7/24
+
+\item
+Assuming the MLE asymptotically follows normal distribution, 95% confidence interval for 𝑆̃(33)
+𝑆̃(33)±1.96√var[𝑆̃(33)]
+Greenwood’s formula:
+var[𝐹̃(𝑡)] ≈(1−𝐹(𝑡)̂)2Σⅆ𝑗𝑛𝑗(𝑛𝑗−ⅆ𝑗)𝑡𝑗\leq 𝑡
+var[𝑆̃(33)] = var [1-𝐹̃(33)] = var[𝐹̃(33)]
+Using Greenwood’s formula,
+var[𝑆̃(33)] ≈(1−𝐹(33)̂)2Σⅆ𝑗𝑛𝑗(𝑛𝑗−ⅆ𝑗)𝑡𝑗\leq 33
+var[𝑆̃(33)] ≈(7/18)2Σⅆ𝑗𝑛𝑗(𝑛𝑗−ⅆ𝑗)𝑡𝑗\leq 33
+
+Page 17 of 17
+j
+tj
+dj
+nj
+𝑑𝑗𝑛𝑗(𝑛𝑗−𝑑𝑗)
+1
+22
+2
+12
+2/(12*10)
+2
+29
+3
+10
+3/(10*7)
+3
+32
+2
+6
+2/(6*4)
+Σ𝑑𝑗𝑛𝑗(𝑛𝑗−𝑑𝑗)𝑡𝑗\leq 33
+0.142857
+var[𝑆̃(33)] ≈0.021605
+Thus, 𝑆̃(33)±1.96√var[𝑆̃(33)]
+(7/18)±1.96√0.021605
+CI is (0.10,0.68)
+
+iv)
+1. Battery life is independent and assume to follow same model for failure.
+2. We do not have information of remaining batteries and the censoring is non-informative.
+3. The battery exploded after 30th month assumed to be censored before 32nd month observations are captured.
+[1]
+[10 Marks]
+********************
