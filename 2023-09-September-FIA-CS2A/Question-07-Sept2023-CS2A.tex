@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+CS2A S2023–5
+7 A survival study followed twelve patients, for a maximum of 10 days each, following
+a major surgical operation. From previous similar studies, around one-third of patients
+survived 10 days. The condition of all patients (i.e. whether a patient was alive or
+dead) was monitored daily. The results are set out below where S(t) is the Kaplan–
+Meier estimate of the survival function:
+Time since operation (days) S(t)
+0 ≤ t < 2 1
+2 ≤ t < 4 0.9
+4 ≤ t < 5 0.7
+5 ≤ t < 7 0.56
+7 ≤ t < 10 0.373
+
+\begin{enumerate}[(a)]
+\item Calculate the number of deaths and the number of patients who were censored,
+stating the times of all deaths and censoring events. 
+An expert analyst has voiced concerns about the accuracy of the data, thinking there is
+likely to have been an error.
+\item Briefly explain the likely source of the expert’s concerns. 
+\item State ways in which this study could be improved. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q7
+(i)
+First calculate 1- \lambda at each event
+1-\lambda =0.9 (trivial)
+1-\lambda =0.7/0.9 = 0.7778
+1-\lambda =0.56/0.7 = 0.8
+1-\lambda =0.373/0.56 = 0.66607 but accept rounding to 2/3 hereafter
+
+Part \item was poorly answered whereas part \item was reasonably well answered, meaning that the shape of marks given to many candidates was quite unusual for this question.
+The main issue with part \item was the tendency of many candidates to use a ‘sum of normal distributions’ rather than a compound distribution approach. Where this was done answers were either incorrect or unnecessarily approximate. The necessary equations for compound Poisson distributions are all found in the Core Reading and the examiners would expect candidates to be familiar with these.
+\newline
+Thus lambda:
+Time since operation (days)
+S(t)
+1-lambda
+lambda
+0≤t<2
+1
+2≤t<4
+0.900
+0.900
+0.100
+4≤t<5
+0.700
+0.778
+0.222
+5≤t<7
+0.56
+0.800
+0.200
+7≤t<10
+0.373
+0.667
+0.333
+
+\lambda = 0.1
+The only combination is d=1, n=10 
+\lambda = 0.222
+The only combination is d=2, n=9 
+\lambda = 0.2000
+The only combination is d=1, n=5 
+\lambda = 0.33333
+The only combination, given there must be less than 4 lives at this point is d=1, n=3
+
+Need to account censored events:
+Must be 2 censoring events before time = 2 as n=10 at that point 
+Must be 2 censoring events at time = 4 to fall from n=9 to n=5 
+Must be 1 censoring event at time = 5 or 6 to fall from n=5 to n=3 
+So in summary
+Time (days)
+deaths
+Censoring events
+<2
+0
+2
+2
+1
+0
+4
+2
+2
+5
+1
+1 or
+1
+6
+0
+7
+1
+0
+(ii)
+Unlikely for there to have been random censoring 
+Very sick patient in bed all the time; it’s difficult to see how censoring could have occurred, but data indicates this 
+(iii)
+Collect more data 
+Have more frequent observations eg hourly 
+Extend the period of observation 
+Patients dying in last 2 intervals implies significant lost important data 
+Reduce heterogeneity and obtain several different S(t) estimates 
+Separate for male/female, existing health conditions, other sensible classes 
+\newline
+[Marks available 3, maximum 2]
+[Total 11]

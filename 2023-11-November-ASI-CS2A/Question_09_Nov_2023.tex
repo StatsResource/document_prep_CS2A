@@ -1,0 +1,117 @@
+
+
+
+Q. 9)
+\item The time series Xt of change in temperature of country Originia is assumed to follow ARIMA(p,d,q) process defined by
+Xt = 1 3928𝑋𝑡−1−37𝑋𝑡−2 128𝑋𝑡−3 𝑒𝑡
+where et follows N(0,1) random variables.
+Derive roots of the characteristic equation given that one of the root is 1. Also, comment on stationarity of the process.
+(3)
+\item A time series Xt is assumed to be stationary and to follow an ARMA (2,1) process defined by:
+Xt = 1   9/15 Xt-1 – 2/15 Xt-2   Zt - 2/7 Zt-1
+where Zt are independent N (0,1) random variables.
+Find the autocorrelation function for lags 0,1,2.
+(5)
+\item Consider the ARCH(1) process:
+𝑋𝑡= 𝜇  𝑒𝑡√\alpha 0  \alpha 1(𝑋𝑡−1− 𝜇)2
+where et are independent normal random variables with variance 1 & mean 0.
+Show that for s = 1,2,…..,t-1. Xt , Xt-s are :
+a) Uncorrelated
+(4)
+b) Not independent
+(3)
+iv) Give one real life example where ARCH model can be used.
+(1)
+[16]
+
+Page 7 of 7
+
+
+[4 Marks]
+Solution 9:
+\item
+The characteristic polynomial is given as below 1−3928𝑡+37𝑡2−128𝑡3
+i.e. 28-39t+12t2-t3 = 0
+i.e. t3-12t2+39t-28=0
+one root is 1
+(t-1)*(a+bt+ct2)=0
+i.e.
+a+bt+ct2-at-bt2-ct3 = 0
+ct3 + bt2+ at-a-bt-ct2=0
+ct3 + (b-c)t2+ (a-b)t-a=0
+c=1
+b-c=-12
+b=-11
+a-b=39
+a=28
+(t-1)*(28-11t+t2)==0
+(t-1)*(t-4)*(t-7)=0
+Other 2 roots are 4 and 7
+All the roots are greater than 1 one of the root is 1 and the process is not stationary
+
+\item
+Cov(Xt, Zt ) = 1
+and,
+Cov(Xt, Zt-1 ) = 9/15 – 2/7 = 33/105
+We need to generate three distinct equations linking \gamma 0, \gamma_{1}, \gamma_{2}.
+\gamma 0 = Cov(Xt, Xt ) = Cov(1 + 9/15 Xt-1 – 2/15 Xt-2 + Zt - 2/7 Zt-1, Xt)
+= 9/15 \gamma_{1} – 2/15 \gamma_{2} + 1 – 2/7 X 33/105
+= 9/15 \gamma_{1} – 2/15 \gamma_{2} + 669/735
+\gamma_{1} = Cov(Xt, Xt-1 ) = Cov(1 + 9/15 Xt-1 – 2/15 Xt-2 + Zt - 2/7 Zt-1, Xt-1)
+= 9/15 \gamma 0 – 2/15 \gamma_{1} – 2/7
+\gamma_{2} = Cov(Xt, Xt-2 ) = Cov(1 + 9/15 Xt-1 – 2/15 Xt-2 + Zt - 2/7 Zt-1, Xt-2)
+= 9/15 \gamma_{1} – 2/15 \gamma 0
+Solving these equations by substitution,
+\gamma 0 = 9/15 \gamma_{1} – 2/15(9/15 \gamma_{1} – 2/15 \gamma 0) + 669/735
+= 9/15 \gamma_{1} – 18/225 \gamma_{1} + 4/225 \gamma 0 + 669/735
+221/225 \gamma 0 = 117/225 \gamma_{1} + 669/735
+\gamma 0 = 117/221 \gamma_{1} + 10035/10829
+
+Page 15 of 17
+Now,
+\gamma_{1} = 9/15 (117/221 \gamma_{1} + 10035/10829)– 2/15 \gamma_{1} – 2/7
+= 351/1105 \gamma_{1} + 6021/10829 – 2/15 \gamma_{1} – 2/7
+= 611/3315 \gamma_{1} + 2927/10829
+2704/3315 \gamma_{1} = 2927/10829
+\gamma_{1} = 0.3314
+\gamma 0 = 1.1021
+\gamma_{2} = 0.0519
+Finally,
+𝝆0 = 1
+𝝆1 = \gamma_{1}/ \gamma 0
+= 0.3007
+𝝆2 = \gamma_{2}/ \gamma 0
+= 0.0471
+[5]
+\item
+a) Since 𝑒𝑡 are independent from 𝑋𝑡,𝑋𝑡−1,…. and E(𝑒𝑡) = 0 we have
+E(𝑋𝑡) = E(𝜇+ 𝑒𝑡√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)
+= 𝜇+ E(𝑒𝑡√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)
+= 𝜇+ E(𝑒𝑡) E(√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) … Since 𝑒𝑡 and 𝑋𝑡−1 are independent
+= 𝜇+ 0 X E(√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)
+= 𝜇
+Cov(𝑋𝑡,𝑋𝑡−𝑠) = E(𝑋𝑡,𝑋𝑡−𝑠) – E(𝑋𝑡)E(𝑋𝑡−𝑠)
+= E((𝜇+ 𝑒𝑡√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)( 𝜇+ 𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2) ) - 𝜇2
+= E(𝜇2 + 𝜇𝑒𝑡√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) + 𝜇𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2) + 𝑒𝑡𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) - 𝜇2
+= E(𝜇2) + 𝜇E(𝑒𝑡) E(√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)+ 𝜇E(𝑒𝑡−𝑠) E(√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2) + E(𝑒𝑡𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) - 𝜇2
+= 𝜇2 + 𝜇 X 0 X E(√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)+ 𝜇 X 0 X E(√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2) + E(𝑒𝑡) E(𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) - 𝜇2
+= 𝜇2 + 0 + 0 + 0 X E(𝑒𝑡−𝑠√\alpha 0+ \alpha 1(𝑋𝑡−𝑠−1− 𝜇)2√\alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2) - 𝜇2
+= 𝜇2 + 0 + 0 + 0 - 𝜇2
+= 0
+Thus, 𝑋𝑡,𝑋𝑡−𝑠 are uncorrelated.
+b) The conditional variant of 𝑋𝑡/𝑋𝑡−1 is
+var(𝑋𝑡/𝑋𝑡−1) = var(𝑒𝑡)( \alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2)
+
+
+Page 16 of 17
+= \alpha 0+ \alpha 1(𝑋𝑡−1− 𝜇)2
+So, the values of 𝑋𝑡−1 are affecting the variance of 𝑋𝑡
+If we apply this recursively, it can be seen that the variance of 𝑋𝑡 will be affected by the value of 𝑋𝑡−𝑠.
+So, 𝑋𝑡 and 𝑋𝑡−𝑠 are not independent.
+
+iv)
+It can be used to model financial time series.
+For e.g. - If Zt is the price of an asset at the end of the t th trading day, it is found that the ARCH model can be used to model Xt = In(Zt /Zt-1), interpreted as the daily return on day t.
+[1]
+[16 Marks]
+n

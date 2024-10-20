@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q. 12)
+\item  Consider the multivariate time series represented by the following pair of equations:
+Xt = 0.7 Xt-1+ 0.4 Yt-1 + etX
+Yt = 0.1 Xt-1+ 0.2 Yt-1 + etY
+where etX and etY are independent white-noise processes. Using eigenvalues, state whether the process is stationary or not.
+
+\item   Consider univariate process:
+Xn= 0.8 Xn-1- 0.4 Xn-2+en
+where en is a white noise process.
+Calculate values of autocorrelation function at lag 1, 2 and expression for autocorrelation function at lag k (k>2).
+(4)
+\item   Two time series X and Y are defined by the equations:
+Xt= 0.55 Xt-1+ 0.45 Yt-1 + etX
+Yt= 0.45 Xt-1+ 0.55 Yt-1 + etY
+where etX and etY are independent white noise processes.
+Show that X and Y are cointegrated, with cointegrating factor (1,-1).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solution 12:
+\item 
+Calculate the eigenvalues of the matrix:
+(0.70.40.10.2)
+
+i.e. we need to determine the value of \lambda for which ⅆⅇ𝑡(0.7− \lambda0.40.10.2− \lambda)=0
+
+➔ ( 0.7- \lambda) * (0.2- \lambda)- 0.04 =0
+➔ 0.10- 0.9 \lambda + \lambda2 =0
+\lambda = 0.77 or 0.129
+
+Since both the eigenvalues are strictly less than 1 in magnitude, the process is stationary.
+
+
+\item  
+The autocovariance at lag 1 is :
+γ1 = cov (Xn, Xn-1)
+= cov (0.8 Xn-1- 0.4 Xn-2+en, Xn-1)
+= 0.8cov (Xn-1, Xn-1) - 0.4cov (Xn-2, Xn-1) + cov (en, Xn-1)
+
+γ1 = 0.8 γ0 - 0.4 γ1
+ie. 1.4 γ1 = 0.8 γ0
+1 = γ1/ γ0 = 8/14
+
+The autocovariance at lag 2 is:
+γ2= cov (Xn , Xn-2)
+γ2 = 0.8 γ1- 0.4 γ0
+
+2 = γ2 / γ0
+
+So, 2 = 0.8 1 - 0.4
+2 = 8/10 * 8/14 – 4/10
+= 4/5 *4/ 7- 2/5
+= 16/35 -2/5
+= 2/35
+
+In general, for k>2,
+γk= cov (Xn , Xn-k)
+γk = 0.8 γk-1- 0.4 γk-2
+
+k = γk/ γ0
+
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 14 of 14
+Therefore,
+k= 0.8 k-1 - 0.4k-2
+
+[4]
+\item  
+To show that the processes X and Y are I(1):
+From the first equation:
+Yt-1= 1/ 0.45* [ Xt – 0.55 Xt-1 - etX ]
+
+Using this in the second equation,
+1/ 0.45* [ Xt+1 – 0.55 Xt - et+1X ]= 0.45 Xt-1 + . 0.55/ .45 * [ Xt – 0.55 Xt-1 - etX ] + etY
+
+This simplifies to:
+Xt+1 = 1.1 Xt - - 0.1 Xt-1 + et+1X - .55 etX + 0.45 etY
+Equivalently,
+Xt = 1.1 Xt-1 - 0.1 Xt-2+ etX - .55 e-1X + 0.45 et-1Y
+
+The characteristic polynomial of the AR part of this equation is:
+1- 1- 1.1 \lambda + 0.1 \lambda2 = 0
+2- ➔ \lambda = 10 or 1
+3- The roots of this equation are 10 and 1. Since one root is equal to 1, X is not stationary.
+
+4- Differencing once will eliminate the root of 1. Since the only root is strictly greater than 1 in magnitude X is I (1).
+
+5- The process of Y is may be expressed as a linear form of I(1) process X and etY, therefore, Y is also I (1).
+
+Now to verify if: X-Y is stationary:
+Xt- Yt = 0.1 Xt-1 – 0.1 Yt-1 + etX – etY
+Setting Wt = Xt – Yt,
+The process is AR (1) since the root of its characteristic equation is 10 and this is greater than 1 in magnitude.
+
+Therefore, Wt is stationary, Xt – Yt is also thus stationary and X and Y are cointegrated, with cointegrating factor (1,-1).
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

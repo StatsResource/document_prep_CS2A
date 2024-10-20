@@ -1,0 +1,40 @@
+
+Q. 7)
+\item The following data is observed from n = 100 realisations from a time series:
+Σ𝑥𝑖100𝑖=1=5954.39 , Σ(𝑥𝑖−𝑥̅)2100𝑖=1=3832.26 , Σ(𝑥𝑖−𝑥̅)((𝑥𝑖 1−𝑥̅)99𝑖=1=3628.34
+Estimate using the data above, the parameters \mu , \alpha  and σ from the model:
+Xt - \mu = \alpha  (Xt-1 - \mu )   et
+where et is a white noise process with variance σ2.
+(3)
+
+Page 6 of 7
+\item After fitting the model with the parameters found in (\item, it was calculated that the number of turning points of the residual’s series et is 48. 
+Explain and perform significance test at 95% confidence interval on turning points whether there is evidence that et is not generated from a white noise process.
+(3)
+[6]
+
+
+
+Solution 7:
+\item
+\mu  = 5954.39/100= 59.54
+Using the known expression of the auto covariance function for AR(1) process 𝜌𝑘= \alpha 𝑘
+\alpha 𝑘̂= 𝜌1 = 3628.34/3832.26 = 0.9468
+To estimate variance σ
+Taking variance on both sides of Xt - \mu = \alpha  (Xt-1 - \mu ) + et
+The fact is Var(Xt - \mu )= Var(Xt-1 - \mu )= \gamma0
+Thus, \gamma0=\alpha 2\gamma0+ σ2
+𝜎̂2= γ0̂ (1−∝2̂)
+=(3832.26/100)*(1-0.94682)
+=3.9699
+𝜎̂=1.99
+
+\item
+Null Hypothesis: Estimate of errors et follows white noise process
+We will reject the null hypothesis if the 48 falls outside the Confidence interval of 95%.
+Mean = 2(N-2)/3 = 2(100-2)/3 = 65.33
+Variance = (16N-29)/90=17.45 and thus S.D. =4.177985
+The CI is (65.33± 1.96*4.177985) and thus CI is (57.1, 73.5)
+Since 48 is outside confidence interval of 95%, et does not follow white noise process
+
+[6 Marks]

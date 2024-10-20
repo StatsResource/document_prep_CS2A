@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+Q. 4) \item  In a city during rainy season the days were observed to be raining (R) or not raining
+(S) on any particular day. The data was recorded for a month of Jun2020 as below:
+Week 1: RSRRSSS
+Week 2: SRRSRSS
+Week 3: RSRSRRS
+Week 4: SSRRSSR
+Week 5: RR
+It was assumed that the rain prediction is dependent only on previous day and hence
+decided to fit Markov chain.
+a) Calculate transition probabilities for the Markov chain. 
+b) Determine the probability that it will rain on 3rd July 2020. (3)
+\item   A life insurance agent sells on an average three life insurance policies per week. Use
+Poisson's law to calculate the probability that in a given week he will sell:
+IAI CS2A-1120
+Page 7 of 8
+a) Some policies. 
+b) 2 or more policies but less than 5 policies. (2.5)
+c) Assuming that there are 5 working days per week, what is the probability that
+in a given day he will sell one policy? (2.5)
+
+
+
+Solution 4:
+i)
+a) Data : RSRRSSSSRRSRSSRSRSRRSSSRRSSRRR
+prr = 6/14=3/7
+prs = 8/14=4/7
+psr = 8/15
+pss = 7/15
+[2]
+b)
+30th June 1st Jul 2nd Jul 3rd Jul
+R S S R
+prs = 8/14 pss = 7/15 psr = 8/15 0.142222
+R S R R
+prs = 8/14 psr = 8/15 prr = 6/14 0.130612
+R R S R
+prr = 6/14 prs = 8/14 psr = 8/15 0.130612
+R R R R
+prr = 6/14 prr = 6/14 prr = 6/14 0.078717
+IAI CS2A-1120
+Page 5 of 9
+Total = 0.482164 [3]
+ii)
+a)
+Here, 
+“Some policies “ means “1 or more policies” i.e 1 minus the “zero policies” probability:
+𝑃(𝑋 > 0) = 1 − 𝑃(𝑥􀬴)
+Now, 𝑃(𝑋) =
+􀯘􀰷􀴋􀰓􀳣
+􀯫!
+So, 𝑃(𝑥􀬴) =
+􀯘􀰷􀰯􀬷􀰬
+􀬴!
+= 4.9787 x 10-2 [1]
+Therefore the probability of 1 or more policies is given by:
+Probability = 𝑃(𝑋 ≥ 0)
+= 1 − 𝑃(𝑥􀬴)
+= 1- 4.9787 x 10-2
+= 0.95021 [1]
+[2]
+b)
+The probability of selling 2 or more, but less than 5 policies is:
+𝑃(2 ≤ 𝑋 < 5) = 𝑃(𝑥􀬶) + 𝑃(𝑥􀬷) + 𝑃(𝑥􀬸 ) [1]
+=
+􀯘􀰷􀰯􀬷􀰮
+􀬶!
++
+􀯘􀰷􀰯􀬷􀰯
+􀬷!
++
+􀯘􀰷􀰯􀬷􀰰
+􀬸!
+= 0.61611 [1.5]
+[2.5]
+c)
+Average number of policies sold per day: 􀬷
+􀬹
+= 0.6 [1]
+So on a given day, 𝑃(𝑋) =
+􀯘􀰷􀰬.􀰲􀬴.􀬺􀰭
+􀬵!
+= 0.32929 [1.5]
+[2.5]
+[12 Marks]
+

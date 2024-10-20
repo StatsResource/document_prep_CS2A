@@ -1,0 +1,64 @@
+Q. 4)
+A health insurance policy offers three types of hospital cash benefits options - Silver, Gold and Platinum, having different lumpsum hospital cash benefits payable.
+Claims on these portfolios of policies occur according to a Poisson process with a mean rate of 4 claims per day, irrespective of the type of benefit. 
+50% of claims are of type Silver, 30% are of type Gold and remaining of type Platinum.
+\item Calculate the expected waiting time until the first claim of type Silver.
+(1)
+\item Calculate the probability that there are at least 9 claims during the first 2 days, given that there were exactly 7 claims during the first day. 
+State any assumptions made.
+(2)
+
+Page 4 of 7
+\item Calculate the probability that there are at least 5 claims of Gold type during the first day and at least 7 claims of amount Gold type during the first 2 days.
+(4)
+[7]
+
+
+Solution 4:
+\item
+Claims of type Silver occur according to a Poisson process with a mean of 50%* 4 = 2 per day.
+So the waiting time until the first claim of type Silver has an exp(2) distribution and the expected waiting time is 1/2 days.
+[1]
+\item
+Let N(t) denote the number of claims during the interval [0,t]. Then:
+P[N(2)>=9| N(1)=7]
+= P[N(2)- N(1)>=2| N(1)- N(0)=7]
+= P[N(2)- N(1)>=2]
+
+Page 8 of 17
+Since N(0)=0 and assuming number of claims in non-overlapping time intervals are independent.
+N(2)-N(1) ˜ Poisson(4), so:
+P(N(2)>=9| N(1)=7) =P(Poisson(4)>=2)
+=1- P(Poisson(4)<=1)
+= 1- exp(-4) (1+4/1!)
+=1- exp(-4)*5
+= 1- 0.018316*5
+= 0.908422
+
+\item
+Let NG(t) denote the number of claims of Gold Type in the interval [0,t].
+P(NG(1) >=5, NG(2))>=7)
+If we have 7 or more claims during the first day, then the second condition is automatically satisfied.
+If we have exactly 6 claims on the first day, then we need at least 1 claim on the second day.
+If we have exactly 5 claims on the first day, then we need at least 2 claims on the second day.
+So the required probability is:
+P(NG(1) >=7) + P(NG(1) =6, NG(2)- NG(1)>=1)
++ P(NG(1) =5, NG(2)- NG(1)>=2) ---------------------------------(1)
+Now NG(1) and NG(2)- NG(1) are both independent Poisson with mean 0.3*4 = 1.2 .
+P(NG(1) >=7) = 1- (NG(1) <=6) = 1- exp(-1.2)* (1+ 1.2/1!+1.2^2/2! + 1.2^3/3!+ 1.2^4/4! + 1.2^5/5!+ 1.2^6/6!)
+=1- .999749
+=0.000251
+P(NG(1) =6, NG(2)- NG(1)>=1) = P(NG(1) =6)* P(NG(2)- NG(1))>=1)
+= P(NG(1) =6)* { 1- P(NG(2)- NG(1))= 0)
+= {exp(-1.2)* 1.2^6/6! } * {1- exp(-1.2)}
+= 0.000873
+P(NG(1) =5, NG(2)- NG(1)>=2) = P(NG(1) =5)* { 1- P(NG(2)- NG(1)) <=1}
+= {exp(-1.2)* 1.2^5/5! } *
+{1- exp(-1.2)(1+1.2)}
+=0.006246*0.337373
+=0.002107
+Substituting in (1),
+The required probability = 0.000251+ 0.000873+0.002107
+= 0.003231
+
+[7 Marks]

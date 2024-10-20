@@ -1,0 +1,40 @@
+Q. 7) As per English Life Tables No. 17 (ELT17), number of lives L(x) at ages 30 and 35 is
+given below:
+Age (x) L(x)
+30 98600.4
+35 98193.0
+Calculate the number of L(32) assuming:
+\item Constant force of mortality between exact ages 30 and 35 years 
+\item Uniform distribution of deaths between exact ages 30 and 35 years 
+
+\item It is known that the force of mortality from age 35 to 40 years is double of what was
+observed during age 30 to 35 years. Using the result from (\item; Calculate the probability
+that a life alive at the age of 35, is still alive at age 38 
+[8]
+
+
+Solution 7:
+i)
+Let the constant force of mortality be μ.
+Then we have
+5p30 = exp {−∫μdx}50 = e ^ (-5μ)
+It is given that 5p30 = L(35) / L(30) = 98193.0 / 98600.4 = 0.995868
+Thus, e ^ (-5μ) = 0.995868
+ -5 μ = ln(0.995868) = -0.00414
+ μ = 0.00083
+Using the value of μ calculated, L(32) = L(30) * 2p30 = L(30) * exp {−∫μdx20
+= L(30) * exp (-2 * μ)
+= 98600.4 * exp (-2 * 0.00083) = 98600.4 * 0.998345
+= 98437.24
+(4)
+ii)
+Under Uniform distribution of death, the number of deaths are uniform
+L(32) = L(30) – 2/5 * {L(30)- L(35)}
+= 98600.4 – 2/5 * (98600.4 - 98193.0)
+= 98437.44
+(2)
+iii)
+Force of mortality = 2* 0.00083 = 0.00166
+3p35 = exp (-3 * 0.00166) = 0.995044
+(2)
+[8 Marks]

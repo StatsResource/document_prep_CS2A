@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Q. 6)
+Light bulbs have the following distribution for the amount of time until burning out:
+Time t in hours
+F(t)
+0 – 4800
+0
+4800 – 6000
+(t – 4800)/1200
+6000
+1
+Each bulb uses 0.015 kilowatt-hours of electricity per hour.
+Calculate the expected number of kilowatt-hours used by 50 bulbs in their first 5000 hours.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solution 6:
+E[min(T,5000) = \int𝑠0(𝑡)ⅆ𝑡50000=\int1ⅆ𝑡48000+\int(1−𝑡−48001200)ⅆ𝑡50004800 
+= 4800 + 5t - 𝑡22400
+= 4800 + 183.333333
+= 4983.33333 
+The number of kilowatt-hours used by 50 bulbs is 50 * 0.015 * 4983.333 = 3737.5 KWH
+
+
+
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

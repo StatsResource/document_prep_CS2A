@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{StatsResource } \rhead{Kevin O'Brien} \chead{Confidence Intervals} %\input{tcilatex}
+
+\begin{document}
+
+
+[8]
+Q. 7) In country of Originia with dense population in metro cities and having 30 geographical
+states, the study was undertaken by using the recent data collected for the latest pandemic
+in the world. The data available is only for one full year from 1st infection was observed
+till vaccine is prepared.
+
+%==============================================%
+\begin{enumerate}[(a)]
+\item  Explain why lives might be lost to the investigation if we are carrying out study of
+multistate model (states such as normal, infected, recovered, death). 
+\item   Explain the above in context of informative and non-informative censoring. 
+\item    Any other type of censoring is demonstrated by this data. 
+In order to perform survival analysis, you have been asked to investigate the impact of
+covariates.
+\item  List down possible covariates to perform survival analysis. (3)
+\item  Explain possible lifetime distributions for proportional hazard function. Discuss or
+debate its advantages or disadvantages for performing survival analysis for
+population of Originia. 
+\end{enumerate}
+
+%==============================================%
+
+
+
+
+Solution 7:
+i)
+Lost to the investigation for each state of the model.
+ Infected may or may not get tested if testing is not compulsory. Thus, may be considered in “Normal”
+state. Thus lost from “infected” state and in turn from “recovered” or “death” state.
+ Infected may recover even before the testing is suggested by doctor. Thus, may be considered in
+“Normal” state. Thus lost from “infected” state and in turn from “recovered” or “death” state.
+ Any other cause of death than this infection will be considered transited in “Normal” to “death” state.
+However, if it is not tested it will be lost from “infected” and then to “death” state.
+ There will not be any lost to investigation for “Normal” state.
+
+%==============================================%
+ii)
+It is non-informative censoring for lifetime investigation.
+ Infected may or may not get tested if testing is not compulsory. Thus, may be considered in “Normal”
+state. Thus lost from “infected” state and in turn from “recovered” or “death” state. – Non-informative
+censoring as information of lifetime to perform survival/ mortality analysis is not captured under
+appropriate state.
+ Infected may recover even before the testing is suggested by doctor. Thus, may be considered in
+“Normal” state. Thus lost from “infected” state and in turn from “recovered” or “death” state. – Noninformative
+censoring as information of lifetime to perform survival/ mortality analysis is not captured
+under appropriate state.
+ Any other cause of death than this infection will be considered transited in “Normal” to “death” state.
+However, if it is not tested it will be lost from “infected” and then to “death” state. – Non-informative
+censoring as information of lifetime to perform survival/ mortality analysis is not captured under
+appropriate state.
+ For “Normal”state – Informative censoring as the survival expectation of this group is higher than the
+“infected” or “recovered” individuals.
+%==============================================%
+iii)
+Other types of censoring as below:
+ Right censoring – since till vaccine is prepared and not till end of infection. 
+ Interval censoring – since we may only know the age to the nearest birthday and not exact date of birth
+as we have started capturing the information from certain time point. 
+[1]
+%==============================================%
+iv)
+List of covariates to perform survival analysis:
+a) Age
+b) Gender
+c) Severity of symptoms
+d) Number of days infection lasted
+e) Co-morbid conditions such as BP, diabetes
+f) Physically Active/ non-active
+g) Level of fitness –no. of hours of weakly exercise/ activities
+h) Profession
+i) Socio – economic group / Income range
+j) States
+k) Metro/Non-metro city
+l) Density of population
+%==============================================%
+v)
+The lifetime distributions for proportional hazard functions are as follows:
+a) The Exponential distribution 
+The hazard rate under this lifetime distribution function is constant. 
+This constant hazard model could reflect the hazard for an individual who remains in good health.
+Here, the level of hazard would reflect the risk of death from unnatural causes. 
+b) The Weibull distribution 
+The hazard rate under this lifetime distribution function is monotonically decreasing or increasing.
+
+The decreasing hazard model could reflect hazard for patients recovering from major surgery. The
+level of hazard is expected to fall as the time since the operation increases. 
+%==============================================%
+c) The Gompertz-Makeham formula 
+The lifetime distribution function has exponential hazard rate. 
+The exponential hazard model could reflect the hazard for leukaemia sufferers who are not
+responding to treatment. The severity of condition and the level of hazard increase with the survival
+time. OR Over longer period exponential hazard rate could reflect the increasing chance of death
+from natural causes as age increases. 
+%==============================================%
+d) The log-logistic distribution (humped hazard) 
+The lifetime distribution function has humped hazard rate. 
+The humped hazard model could reflect the hazard for patients with disease that is most likely to
+cause death during the early stages. As the initial condition becomes more severe, the level of
+hazard increases. But once the patient survives the period of highest risk, the level of hazard
+decreases. 
+
+%==============================================%
+\newpage 
+
+To perform survival analysis of population of Originia:
+a) The Exponential distribution can be used for the population which continues to be in “normal”
+state as they are expected to follow the natural and normal survival/ death expectations.
+However, it may not be applicable for all age group.
+
+b) The Weibull distribution can be used for the population which recovers from the being infected.
+Their survival probability is expected to get better and better as they recover from being
+infected. The pandemic is fairly new and it will not be very clear whether the recovered
+population may or may not have any future implications/ re-occurrence/ other side effects due
+to getting infected once.
+c) The exponential hazard function could be appropriate for age group which is most impacted by
+this infection. The severity of condition and the level of hazard may increase with the survival
+for short span of time. Also, they may be no time to observe this trend in case the infection
+results into deaths in really very short span of time. It does not look appropriate to apply this
+hazard function to any of the state of the analysis.
+d) The log-logistic distribution (humped hazard) is likely to reflect the hazard infected population
+with most impacted age group as it is most likely to cause death during the early stages. As the
+initial condition becomes more severe, the level of hazard increases. But once the patient
+survives the period of highest risk, the level of hazard decreases.
+
+%==============================================%
+\end{document}

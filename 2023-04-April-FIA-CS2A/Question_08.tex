@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+8 Consider the time-series model:
+𝑦􀯧 􀵌 $a$ 𝑦􀯧􀬿􀬶 􀵅 𝑒􀯧 􀵅 $b$ 𝑒􀯧􀬿􀬵 (A)
+where 𝑒􀯧 is a white noise process with mean 0 and variance σ􀬶.
+\begin{enumerate}
+\item   Derive the possible values of $a$ and $b$ for which the process 𝑦􀯧 is stationary
+and invertible. 
+\item   State the values of p and q for which 𝑦􀯧 is an ARMA(p, q) process. 
+%---------------------------%
+\medskip
+If $b$ 􀵌 0 the original model (A) reduces to
+𝑦􀯧 􀵌 $a$ 𝑦􀯧􀬿􀬶 􀵅 𝑒􀯧 (B)
+\item  Derive the autocorrelation function for this model while stationarity is
+assumed to hold. [8]
+An actuary attempts to fit the model (A) to some time series data but concludes that
+the simpler model (B) is more appropriate.
+\item  Discuss how this conclusion could have been reached. 
+\end{enumerate}
+\medskip 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+Q8
+\item  
+Using the backshift operator one can show that the corresponding polynomials are
+1-a B^2 
+and
+1+bB 
+The roots need to be in absolute value less than 1
+abs(a)<1 and abs(b)<1 
+\item  
+ARMA(2,1) 
+\item 
+The Yule-Walker equations are
+gamma_0=a gamma_2+sigma^2 
+and
+gamma_k=a gamma_{k-2} for k >= 1 
+So
+%-------------------------%
+\medskip 
+gamma_1=a gamma_1 
+gamma_2=a gamma_0 
+These imply that
+gamma_1=0, gamma_2=a gamma_0 and in general 
+gamma_k =0 for k odd 
+gamma_k = a^{k/2} gamma_0 for k even 
+therefore
+rho_k=0 for k odd \item 
+rho_k=a^(k/2) for k even \item 
+
+
+%%% (There are no marks available for deriving the Yule Walker equations from first principles)
+%----------------------------------------------------------%
+\item 
+Sample acf of the data could have indicated insignificant spikes for odd lags as
+for b=0 case those values are zero 
+AIC/BIC could have also been used to confirm the statistical preference between the
+two models 
+In the parameter estimation process for model (1), some low t-values could have been produced, particularly for the parameter b, indicating over-parametrisation. 
+other sensible comments contrasting the fit of the two models 
+%----------------------------------------------------------%
+
+\end{document}

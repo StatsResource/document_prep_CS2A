@@ -1,0 +1,110 @@
+Q. 9) A new insurance company launched certain insurance products in year 2015. As this was
+a new line of business for it then, it has been using the standard mortality table rates to
+price its product and continues to do so since then. Over the years, it has gathered mortality
+claims data on its business, which can be used to set its future mortality assumptions.
+However, the products team is insisting on keeping the mortality assumptions unchanged
+(same as used since 2015) to price its new products. The Chief Actuary has asked to
+perform an analysis and validate the suitability of these standard rates.
+The table below summarises the experience analysis numbers from the policies sold by
+the insurance company and the standard mortality rates it has been using so far
+Age group Central exposed to
+risk
+Number of Deaths
+in the sample
+Standard mortality
+rate used
+20-24 56655 80 0.000937
+25-29 61220 78 0.000934
+30-34 64908 80 0.001042
+35-39 62052 85 0.001358
+40-44 58751 120 0.001969
+45-49 54900 150 0.003168
+50-54 48679 295 0.005550
+55-59 41699 366 0.008925
+IAI CS2A-0921
+Page 8 of 8
+\item Carry out Chi square test at 5% confidence interval to check whether the
+underlying mortality for the insurer is same as the standard mortality rates
+
+\item Based on (\item above, state your recommendation. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Solution 9:
+i)
+The chi-squared test is a suitable overall test.
+Test statistic = Σ(𝑂𝑏𝑠𝑒𝑟𝑣𝑒𝑑 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑑𝑒𝑎𝑡ℎ−𝐸𝑥𝑝𝑒𝑐𝑡𝑒𝑑 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑑𝑒𝑎𝑡ℎ𝑠)2𝐸𝑥𝑝𝑒𝑐𝑡𝑒𝑑 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑑𝑒𝑎𝑡ℎ𝑠
+Age group
+Central exposed to risk
+Number of Deaths in the sample
+Standard mortality rate used
+Expected number of deaths
+Observed - Expected
+[(Observed - Expected) ^ 2] / Expected
+20-24
+56655
+80
+0.000937
+53.09
+26.91
+13.64
+25-29
+61220
+78
+0.000934
+57.18
+20.82
+7.58
+30-34
+64908
+80
+0.001042
+67.63
+12.37
+2.26
+35-39
+62052
+85
+0.001358
+84.27
+0.73
+0.01
+40-44
+58751
+120
+0.001969
+115.68
+4.32
+0.16
+45-49
+54900
+150
+0.003168
+173.92
+-23.92
+3.29
+50-54
+48679
+295
+0.00555
+270.17
+24.83
+2.28
+55-59
+41699
+366
+0.008925
+372.16
+-6.16
+0.10
+29.32
+The test statistic ~ Chi square with m degrees of freedom
+Here m is the number of age groups, which in this case is 8. We have not calculated any parameters. Hence, m remains 8
+The critical value of the chi-squared distribution at the 5% level of significance with 8 degrees of freedom is 15.51
+Value of test statistic = 29.32
+Given, Test statistic > Critical value, we reject the null hypothesis
+(8)
+ii)
+Thus, standard mortality rates are not a good representation of the actual mortality experience and it is recommended that the company performs experience analysis to set its mortality assumptions.
+(2)
+[10 Marks]

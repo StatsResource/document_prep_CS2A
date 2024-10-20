@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+3 The figure below shows three vectors ax, bx and kt, which were obtained by applying
+the two-factor Lee–Carter model to mortality data derived from the period 1970 to
+2018 for the age range 65 to 90 years.
+\item   Discuss what each of these three vectors suggest about the characteristics of
+the mortality rates in the data. 
+
+\item   Suggest a socio-economic reason for your conclusion about vector b in part \item  
+above. 
+\item  Calculate m70, 2018 using the output from the model (reading the values from
+the plots in the figure). 
+An ARIMA(0,1,0) model (discrete random walk with drift) with Normal errors
+ε\sim N(0, σ2) was used to model projected k values. The drift term of the time series
+model was estimated as −0.4763, with standard error 0.084, and σ2 was estimated as
+0.346.
+\item  Calculate a 90% confidence interval for m70, 2019 based on the value of
+m70, 2018 calculated in part \item .
+On analysing the past data over a larger age range (from 20 to 90 years) it was
+determined that there was an increase in rates for 20–30 year olds in the 1970s due
+to an illness that almost exclusively affected the younger population. The higher
+mortality rates only lasted until 1980 when a cure was found and introduced to the
+population.
+(v) Explain how this cohort effect may manifest itself in the output from the twofactor
+Lee–Carter model, fitted to ages 20–90 and calendar years 1970–2018,
+in terms of a, b and k. [5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+
+Q3
+\item  
+From the 3 plots in Figure 1
+a
+The increasing values of a imply that Mortality rates increase with age \item 
+Visually the plot appears linear \item 
+which implies that the increase is exponential 
+k
+Given that the b-values are positive \item 
+%-------------------------%
+\medskip 
+the decreasing values of k imply that mortality has been improving over the period \item 
+either: Visually the plot appears somewhat linear \item 
+which implies that improvement rates have been constant \item 
+or: the rate of decrease appears less pronounced at the earliest and latest years
+suggesting different rates of improvement over the period 
+b
+The increasing values of b imply that mortality improvements have been greatest
+for younger ages \item 
+The values appear constant in ages 65 - 70 and decrease thereafter \item 
+
+% (½ mark for any other reasonable observation about the nature of the graphs)
+% [Marks available 6, maximum 4]
+
+\item  
+Medical improvements have been greatest for younger ages
+Education has had the greatest effect on younger population e.g. related to smoking advice, general health
+Or any other reasonable comment 
+(Award ½ mark if reasonable comment about older ages instead)
+\item 
+exp(-3.35 + 0.0484 * (-13)) = 0.0187 accept any 0.0185 - 0.0189 
+(Award ½ mark if parameters read correctly or calculation performed correctly but not both)
+\item 
+projected k, in 1 years: -0.4763 1.64 * (0.0842 + 0.346)1/2 
+k = -0.4763 0.9745 
+k = (-1.4508, 0.4982) 
+Therefore, the lower limit of the required confidence interval is
+m = 0.0187 exp(0.0484 * -1.4508) = 0.0174 
+The upper limit is m = 0.0187 exp(0.0484 * 0.4982) = 0.0192 
+(v)
+ax is a measure of the average rate at each age over the investigation period. Values
+would therefore be relatively high for the 20-30 year group. A plot of ax may show
+an “illness bump" 
+For kt there would be a rapid decline in values around 1980, due to the rapid fall off
+of deaths in the 20-30 age range following the cure being introduced to the
+population. It may lead to a general underestimation of projected mortality rates if a simple linear model is adopted for projecting k. The effect will depend on the
+relative weightings of deaths in that age group 
+bx will show large numbers in the 20-30 year band; these characteristics will be incorrectly projected into the future (assuming the illness has been eradicated), with improvements at these ages being greatly exaggerated 
+In summary projected mortality rates are likely to be too low, with the greatest effect
+on the 20-30 year age band 
+%-------------------------%
+\medskip 
+Other reasonable comments on ages 30+ 
+\end{document}
+% [Marks available 8, maximum 5]
+% [Total 16]
+% This question was generally poorly answered, particularly parts \item  , \item  and (v).
+% In part \item   a large range of sensible points about a, b and k were given credit. Many candidates simply recited definitions of these parameters rather than applying those definitions to the evidence of the graphs in the question. The best answers combined a description of the plots with an understanding of the model parameters.
+% In part \item  partial credit was given to a wide range of approaches to calculating a confidence interval. In particular a number of candidates derived a value for m70;2019 and then built a confidence interval for that rather than building the interval around k.
+% In part (v), candidates were not given credit for discussion of the advantages and disadvantages of cohort models given one is assumed in the question.

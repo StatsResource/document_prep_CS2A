@@ -1,0 +1,70 @@
+Q. 8)
+A generalised extreme value distribution used to model flood damage in Actuaria town, in particular the shape parameter ‘\gamma’ used is 1.
+\item Identify the type of extreme value distribution and state it’s key characteristic.
+(1)
+\item Individual losses X of flood in the Actuaria town, follow a Pa(5,2) distribution (i.e  in $Pa(\lambda,\alpha)$ notation)
+
+The maximum claim in the sample of 50 claims is defined as XM which follows approximate distribution of GEV(a,b,c) where 
+\begin{eqnarray*}
+a &=& \lambda \times (n^{1/\alpha}) -\lambda,\\ 
+b &=& \lambda \times (n^{1/\alpha}) /\alpha  \\  
+c &=& 1/\alpha \\
+\end{eqnarray*}
+
+Calculate the approximate and exact probability that the maximum claim is more than Rs. 4 crores and comment on GEV distribution.
+(2)
+\item State the key advantage that the generalised Pareto distribution has over the generalised extreme value distribution for the extreme event of flood damage.
+(1)
+
+\subsection*{Remark}
+\begin{itemize}
+\item We are given a Pa(5,2) distribution
+\item Shape Parameter $\alpha = 5$
+\item Scale Parameter $\lambda = 2$
+\item Sample of 50 claims $n=50$
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+The Fréchet distribution, also known as inverse Weibull distribution,[2][3] is a special case of the generalized extreme value distribution. 
+It has the cumulative distribution function
+
+
+$${\displaystyle \Pr(X\leq x)=e^{-x^{-\alpha }}{\text{ if }}x>0.}$$
+where α > 0 is a shape parameter. 
+
+It can be generalised to include a location parameter m (the minimum) and a scale parameter s > 0 with the cumulative distribution function
+
+
+$${\displaystyle \Pr(X\leq x)=e^{-\left({\frac {x-m}{s}}\right)^{-\alpha }}{\text{ if }}x>m.}$$
+
+\end{framed}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Solution 8:
+\item
+Since \gamma>0, this is a Fréchet-type GEV distribution.
+The key characteristic is they are ‘heavy tail’ whose higher moments can be infinite.
+[1]
+\item
+a = 2 * (50^{1/5}) -2=2.37345 → location parameter
+b = 2 * (50^{1/5})/5 = 0.87469 →scale parameter
+c=1/5=0.2 →shape parameter
+
+
+P(XM>4) ≈ 1 – F(XM=4) = 1- exp{-[1+c*(4−𝑎𝑏)]^(−1/𝑐)}
+P(XM>4) ≈ 1 – exp{-[1+0.2*(4-2.37345)/0.87469]^(1/0.2)} = 1-0.814027 = 0.18597
+P(XM>4) = 1- Fx(4) = 1-[1-(\lambda/(\lambda+4))\alpha ]n = 1-[1-(2/(2+4))5]50
+=1-[1-(1/3)5]50 = 0.18632
+The probabilities are very close, suggesting the GEV is reasonably approximate for this block size.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+The key advantage is the generalised Pareto distribution makes use of all the data in the tail whereas generalised extreme value distribution might exclude some data values.
+
+
+\end{document}

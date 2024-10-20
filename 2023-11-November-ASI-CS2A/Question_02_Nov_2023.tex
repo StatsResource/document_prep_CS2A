@@ -1,0 +1,239 @@
+Q. 2)
+An Actuary has been asked to build a model to predict whether a particular policy will have a claim or not. Consider a sample dataset given below corresponding to past year.
+Location/Zone
+Policy Type
+Business Type
+Age Group
+Claim
+(X1)
+(X2)
+(X3)
+(X4)
+(Y)
+East
+Individual
+Fresh
+<45
+No
+West
+Floater
+Port
+45-55
+Yes
+South
+Individual
+Port
+>55
+Yes
+North
+Individual
+Port
+>55
+Yes
+East
+Floater
+Fresh
+<45
+No
+North
+Floater
+Fresh
+45-55
+No
+South
+Floater
+Fresh
+45-55
+No
+West
+Individual
+Port
+>55
+Yes
+East
+Individual
+Port
+<45
+No
+West
+Individual
+Fresh
+<45
+No
+North
+Floater
+Port
+>55
+Yes
+South
+Floater
+Port
+45-55
+No
+
+Page 3 of 7
+You have been asked to use Naïve-Bayes Classifier Model to predict whether a claim will be made or not for a given set of data inputs.
+\item What assumption will you make in order to apply Naïve-Bayes Classifier Model?
+(1)
+\item Show that the conditional probability that a policy with n characteristics gives a claim can be written as
+P (Claim = Yes | X1 = x1, X2 = x2,….., Xn=xn) ∝ P(Claim=Yes) \pi 𝑃(𝑋𝑛𝑗=1j = xj | Claim = Yes)
+where Xj is random variable denoting the variable j and Xj is the realisation of that random variable.
+(3)
+\item Calculate the conditional probability P(Xj | Yj) for each xj in X and yj in Y.
+(7)
+iv) Assume a new policy A of Individual Policy type from North Zone of age group 45-55 years and Port business type is written by the company. 
+
+Predict whether there will be a claim or not on the given policy. Your calculation shall include proportional probabilities also.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Solution 2:
+\item
+The fundamental Naïve Bayes assumption is that each feature makes an
+• independent and
+• equal
+contribution to the outcome.
+[1]
+\item
+Using the definition of conditional probabilities, i.e., P(X|Y) = P (X, Y)/P(Y)
+
+
+P(Claim = Yes | X1 = x1, X2 = x2, ….., Xn = xn) = P( Claim = Yes, X1 = x1, X2 = x2, ….., Xn = xn) / P(X1 = x1, X2 = x2, ….., Xn = xn)
+Using the same definition in reverse. i.e., P(X,Y) = P(X|Y) P(Y). we can write the numerator as :
+P(Claim = Yes, X1 = x1, X2 = x2, ….., Xn = xn) = P (X1 = x1, X2 = x2, ….., Xn = xn | Claim = Yes) P (Claim = Yes)
+Under the naïve bayes approach, we assume that Xj are conditionally independent given the claim outcome. 
+
+This means we can write the first part of above equation as:
+P(X1 = x1, X2 = x2, ….., Xn = xn | Claim = Yes) = P(X1= x1 | Claim = Yes) * P(X2= x2 | Claim = Yes) * ….. * P(Xn= xn | Claim = Yes)
+= \pi 𝑃(𝑋𝑗=𝑥𝑗 |𝐶𝑙𝑎𝑖𝑚=𝑌𝑒𝑠)𝑛𝑗=1
+Finally, treating the denominator as a constant of proportionality in original equation, we can write the desired probability as required:
+P (Claim = Yes | X1 = x1, X2 = x2,….., Xn=xn) ∝ P(Claim=Yes) * \pi 𝑃(𝑋𝑛𝑗=1j = xj | Claim = Yes)
+
+\item
+The conditional Probability P(Xi | Y\item for each xi in X and yj in Y can be written as:
+Location/Zone
+Yes
+No
+P(Yes)
+P(No)
+North
+2
+1
+2/5
+1/7
+East
+0
+3
+0/5
+3/7
+West
+2
+1
+2/5
+1/7
+South
+1
+2
+1/5
+2/7
+Total
+5
+7
+100%
+100%
+Policy Type
+Yes
+No
+P(Yes)
+P(No)
+Individual
+3
+3
+3/5
+3/7
+Floater
+2
+4
+2/5
+4/7
+Total
+5
+7
+100%
+100%
+Business Type
+Yes
+No
+P(Yes)
+P(No)
+Fresh
+0
+5
+0/5
+5/7
+Port
+5
+2
+5/5
+2/7
+Total
+5
+7
+100%
+100%
+Age Group
+Yes
+No
+P(Yes)
+P(No)
+<45
+0
+4
+0/5
+4/7
+45-55
+1
+3
+1/5
+3/7
+>55
+4
+0
+4/5
+0/7
+Total
+5
+7
+100%
+100%
+Claim
+Claim
+P(Yes)/P(No)
+Yes
+5
+5/12
+No
+7
+7/12
+Total
+12
+100%
+[7]
+iv)
+Let Policy A = (North Zone, Port, Individual, 45-55)
+P(Claim = Yes | Policy A) = P( North Zone | Claim = Yes) P( Port | Claim = Yes) P( Individual | Claim = Yes) P( 45-55 | Claim = Yes) / P(Policy A)
+
+Page 5 of 17
+P(Claim = No | Policy A) = P( North Zone | Claim = No) P( Port | Claim = No) P( Individual | Claim = No) P( 45-55 | Claim = No) / P(Policy A)
+Since P(Policy A) is common in both probabilities, we can ignore P(Policy A) and find proportional probabilities as:
+P(Claim = Yes | Policy A) ∝ 2/5 * 5/5 * 3/5 * 1/5 ≈ 0.048
+P(Claim = No | Policy A) ∝ 1/7 * 2/7 * 3/7 * 3/7 ≈ 0.0075
+Now, since
+P(Claim = Yes | Policy A) + P(Claim = No | Policy A) = 1
+These numbers can be converted into a probability by making the sum equal to 1 (normalization):
+P(Claim = Yes | Policy A) = 0.0480.048+0.0075 = 0.865
+P(Claim = No | Policy A) = 0.00750.048+0.0075 = 0.135
+Since, P(Claim = Yes | Policy A) > P(Claim = No | Policy A)
+So, prediction that Claim will be there on the given policy is Yes.
+
+[15 Marks]

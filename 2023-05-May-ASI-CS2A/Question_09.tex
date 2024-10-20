@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Q. 9)
+\item  Let Xt be an autoregressive process of order 1 i.e. AR(1) given by:
+Xt = \mu + \alpha (Xt-1 - \mu) + et
+where {et : t = 1, 2,….} is white noise process.
+Prove that:
+Xt = \mu + \alphat * (X0 - \mu) + \Sum(𝑡−1𝑗=0 j * et– j)
+(2.5)
+\item   Prove that:
+var(Xt ) = \Sum2 (1- \alpha2t ) / (1- \alpha 2) + \alpha 2t * var (X0)
+where \Sum2 denotes the common variance of the white noise terms {et : t = 1, 2,….}, and ‘var’ denotes the variance.
+(2.5)
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 5 of 6
+\item   \lambda =2 is a root of the characteristic equation of the process:
+6 Xt - 13 Xt -1 + 9 Xt -2 - 2 Xt -3 +et
+Calculate the other roots and classify the process as I(d).
+(4)
+iv) Consider the stationary AR process defined by the equation:
+Xt = 712 Xt -1 – 112 Xt -2 + et
+Determine the values of the ACFs ρ1 and ρ2 and the PACFs φ1 and φ2.
+(4)
+[13]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Solution 9:
+\item 
+Xt = \mu + \alpha (Xt-1 \mu) + et
+Xt-1 = \mu + \alpha (Xt-2 - \mu) + et-1
+Substituting for Xt-1 , equation (1) becomes
+Xt = \mu + \alpha (\mu + \alpha (Xt-2 - \mu) + et-1 - \mu) + et
+= \mu + \alpha2 * (Xt-2 - \mu) + \alphaet-1 + et
+
+Repeating this process for one step
+Xt = \mu + \alpha3 * (Xt-3 - \mu) + \alpha2et-2 + \alphaet-1 + et
+
+In next two steps:
+Xt = \mu + \alpha4* (Xt-4 - \mu) + + \alpha3 et-3 + \alpha2et-2 + \alphaet-1 + et
+After t steps the equation iteratively becomes:
+Xt = \mu + \alpha t * (X0 - \mu)+ \Sum(𝑡−1𝑗=0j * et– j)
+[1 mark for showing the iteration sufficiently]
+[2.5]
+\item  
+Xt = \mu + \alpha t * (X0 - \mu)+ \Sum(𝑡−1𝑗=0j * et– j)
+Taking variance,
+Var (Xt ) = var [ \mu + \alphat * (X0 - \mu) + \Sum(𝑡−1𝑗=0j * et– j)
+
+= \alpha2t * var(X0 - \mu) + \Sum(𝑡−1𝑗=02j * var(et– j))
+
+= \alpha2t * var(X0) + \Sum2 *\Sum(𝑡−1𝑗=02j)
+
+Now using the formula a+ ar+ ar2+……..ar(n-1) = a(1- rn) / (1- r) for the n terms of Geometric progression:
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 8 of 14
+var (Xt ) = \alpha2t * var (X0) + \Sum2 ( 1- 2t) / (1- \alpha 2 )
+
+[2.5]
+\item  
+The process can be written as
+-6 Xt + 13 Xt -1 - 9 Xt -2 + 2 Xt -3 = et
+The characteristic equation is
+-6 + 13 z – 9 z2 + 2 z3 =0
+Since z =2 is a root, we can write this equation as
+-6 + 13 z – 9 z2 + 2 z3 = (z-2)( az2+ bz +c), where a,b and c are constants.
+
+One way to solve this equation is comparing the coefficients on both sides.
+2z3 = az3
+a=2
+Comparing the constant term,
+-6= -2c
+c= 3
+
+Comparing the coefficient of z,
+13= c -2b
+13=3- 2b
+10= -2b
+b= -5 
+So the equation can be written as
+-6 + 13 z – 9 z2 + 2 z3 = (z-2)( 2z2-5z +3)
+= (z-2)( 2z-3) (z-1)
+So the other roots of the equation are \lambda =1 and \lambda = 3/2
+The process is not stationary since one root is strictly equal to 1 (for the process to be stationary all the roots should be strictly greater than 1). 
+-6 Xt + 13 Xt -1 - 9 Xt -2 + 2 Xt -3 = et
+➔ -6 Xt + 6 Xt -1 + 7 Xt -1 – 7 Xt -2 - 2 Xt -2 + 2 Xt -3 = et
+➔ -6 ∇Xt + 7 ∇Xt-1 -2 ∇Xt-2 = et
+Characteristic equation then becomes:
+➔ -6 + 7z` -2z`2 =0
+The roots of this equation are: z` = 2, 3/2
+So differencing the process eliminates the root of 1. The two remaining roots (i.e. 2 and 3/2) are strictly greater than 1 in magnitude.
+So the differenced process is stationary. Hence the process is I(1).
+
+[4]
+iv)
+Autocovariance at lag 1, γ1= cov(Xt, Xt-1)
+= cov(712Xt -1 – 112Xt -2 + et, Xt-1 )
+Since, cov(et, Xt -k) = 0 for all k>=1
+i.e., γ1 = 712 γ0 - 112 γ1
+Rearranging we get,
+1312 γ1= 712γ0
+γ1= 713γ0
+%%%%%%%%%%%%%%%%%%%%%%%
+Page 9 of 14
+Dividing by γ0
+ρ1=713
+Autocovariance at lag 2, γ2= cov(Xt, Xt-2)
+= cov(712 Xt -1 – 112 Xt -2 + et, Xt-2)
+ie. γ2 = 712 γ1 - 112 γ0
+Dividing by γ0
+ρ2= 712 ρ1 – 112
+ρ2 = 712 *713 – 112 = 49156 – 112 = 36156 = 313
+φ1= ρ1 = 713
+φ2= (ρ2 - ρ12)/ (1- ρ12)
+= (3/13 –( 7/13)^2) / (1- 49/169)
+= (-10)/169 / (120/169)
+= - 1/12
+[4]
+[13 Marks]

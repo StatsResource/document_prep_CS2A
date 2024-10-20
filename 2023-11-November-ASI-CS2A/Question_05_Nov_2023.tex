@@ -1,0 +1,388 @@
+Q. 5)
+\item Explain rate interval and three possible definition of age, rate interval, \mu  rate of mortality and q probability of death.
+(3)
+\item How would an Actuary graduate the crude rates of mortality for following classes of lives:
+a) patients dealing with Chronic myeloid leukemia (CML).
+b) male population of all civil services of entire country.
+c) females with life insurance for large developed country.
+d) a life insurance product to be sold to lives under age 30.
+(2)
+\item An investigation took place into the mortality of diabetes patients between exact age 50 and 51, the force of mortality \mu 50 is assumed to be constant.
+The investigation began on 1st April 2022 and ended on 1st April 2023. Table below gives the data collected in this investigation for 10 lives.
+Life
+Date of birth
+Date of entry into observation
+Date of exit from observation
+Exit due to death (Yes-1, No-0)
+1
+1st May 1972
+1st April 2022
+1st April 2023
+0
+2
+1st July 1972
+1st April 2022
+1st April 2023
+0
+3
+1st October 1972
+1st July 2022
+1st April 2023
+0
+4
+1st January 1972
+1st April 2022
+1st July 2022
+1
+5
+1st March 1973
+1st April 2022
+1st April 2023
+0
+6
+1st December 1971
+1st July 2022
+1st October 2022
+0
+7
+1st August 1972
+1st April 2022
+1st April 2023
+0
+8
+1st August 1972
+1st April 2022
+1st September 2022
+1
+9
+1st November 1972
+1st October 2022
+1st April 2023
+0
+10
+1st June 1972
+1st October 2022
+1st April 2023
+0
+a) Estimate the constant force of mortality and probability of death using a two-state model and the data of 10 lives in the table above.
+(4)
+b) Assuming the maximum likelihood estimate of the constant force using a Poisson model is exactly same as estimate using the two-state model, outline the differences between the two-state model and the Poisson model when used to estimate the force of mortality or otherwise.
+(2)
+iv) A graduation of mortality experience has been carried out for the given population.
+
+Page 5 of 7
+Age last birthday
+𝒒̂x using census data
+37
+0.0072
+38
+0.0078
+39
+0.0081
+40
+0.0104
+41
+0.0112
+42
+0.0114
+43
+0.0120
+Perform test of goodness of fit for the graduated 𝑞̂x where Exposed Actual death data to be captured using following information:
+Age nearest birthday
+Year 1
+Year 2
+Beginning of Year 1
+Beginning of Year 2
+Beginning of Year 3
+37
+6
+8
+1050
+1043
+1053
+38
+6
+8
+1130
+1123
+1133
+39
+8
+8
+1060
+1052
+1062
+40
+11
+9
+1235
+1225
+1235
+41
+14
+12
+1160
+1149
+1159
+42
+13
+13
+1370
+1357
+1367
+43
+14
+16
+1240
+1225
+1235
+Explicitly state any assumption of rate interval and degrees of freedom.
+(4)
+[15]
+
+
+
+Solution 5:
+\item
+A rate interval is a period of one year during which a life’s recorded age remains the same.
+
+Page 9 of 17
+Definition of x
+Rate interval
+𝜇̂ estimates
+𝑞̂ estimates
+Age last birthday
+[x,x+1]
+\mu x+1/2
+qx
+Age nearest birthday
+[x-1/2,x+1/2]
+\mu x
+qx-1/2
+Age next birthday
+[x-1,x]
+\mu x-1/2
+qx-1
+
+\item
+a) Graphical as no possibility of standard table
+b) Parametric formula as large experience is available
+c) With reference to standard table as the standard table includes experience for females
+d) Spline function to be used as it special case of parametric formula and there are different knots for this age group with infant mortality, accident hump, etc.
+
+\item
+a)
+\mu  = d/v
+we observe 2 deaths i.e. d=2
+‘v’ is for all 10 lives and computation of v on annual basis
+Exposure period in age 50 to 51 under investigate to be determined
+Life (\item
+Date of birth
+Date of entry into observation
+Date of exit from observation
+vi(years)
+1
+1st May 1972
+1st April 2022
+1st April 2023
+11/12
+2
+1st July 1972
+1st April 2022
+1st April 2023
+9/12
+3
+1st October 1972
+1st July 2022
+1st April 2023
+6/12
+4
+1st January 1972
+1st April 2022
+1st July 2022
+3/12
+5
+1st March 1973
+1st April 2022
+1st April 2023
+1/12
+6
+1st December 1971
+1st July 2022
+1st October 2022
+3/12
+7
+1st August 1972
+1st April 2022
+1st April 2023
+8/12
+8
+1st August 1972
+1st April 2022
+1st September 2022
+1/12
+9
+1st November 1972
+1st October 2022
+1st April 2023
+5/12
+10
+1st June 1972
+1st October 2022
+1st April 2023
+6/12
+V = Σ𝑣𝑖 = 4.4167
+\mu  = 2/ 4.4167 = 0.45283
+q=1-exp^(-\mu )
+q = 1-0.635826
+q= 0.364174
+
+b)
+• Poisson model is not an exact model, it allows for non-zero probability of more than n deaths in an sample size of n.
+• The variance of MLE of two-state model is only available asymptotically whereas for Poisson model is available in term of true \mu 
+• Two-state model extents to processes with increments, whereas Poisson model does not.
+• The Poisson model is a less satisfactory approximation to the multiple state model when transition rates are high.
+
+iv)
+Null Hypothesis: The graduated rates are the true underlying mortality rates for the population
+Standardised deviation at each age is computed below using formula
+Zx = 𝜃𝑥−𝐸𝑥𝑞𝑥̂√𝐸𝑥𝑞𝑥̂:
+To determine initial exposure and observed deaths adjustment is required at each age for last birthday.
+
+Page 10 of 17
+Two approaches:
+1st approach:
+Exposure = (0.5*Year1 beginning + Year2 beginning + 0.5*Year3 beginning)/2
+No of death = avg of 2 years
+OR
+2nd approach:
+Exposure = (0.5*Year1 beginning + Year2 beginning + 0.5*Year3 beginning)
+No of death = sum of 2 years
+1st approach:
+The corresponding goodness of fit to be performed.
+Age
+Initial Exposure to Risk Ex
+Observed Deaths θx
+𝒒̂x
+Expected Deaths
+Ex*𝒒̂x
+Zx
+𝒁𝒙𝟐
+37
+1047.25
+7
+0.0072
+7.54
+-0.19673
+0.03870
+38
+1127.25
+7
+0.0078
+8.79
+-0.60452
+0.36545
+39
+1056.50
+8
+0.0081
+8.56
+-0.19063
+0.03634
+40
+1230.00
+10
+0.0104
+12.79
+-0.78063
+0.60939
+41
+1154.25
+13
+0.0112
+12.93
+0.02014
+0.00041
+42
+1362.75
+13
+0.0114
+15.54
+-0.64325
+0.41377
+43
+1231.25
+15
+0.012
+14.78
+0.05854
+0.00343
+OR
+2nd approach:
+Age
+Initial Exposure to Risk Ex
+Observed Deaths θx
+𝐪̂x
+Expected Deaths
+Ex*𝐪̂x
+Zx
+𝐙𝐱𝟐
+37
+2094.50
+14
+0.0072
+15.08
+-0.27821
+0.07740
+38
+2254.50
+14
+0.0078
+17.59
+-0.85493
+0.73090
+39
+2113.00
+16
+0.0081
+17.12
+-0.26959
+0.07268
+40
+2460.00
+20
+0.0104
+25.58
+-1.10398
+1.21877
+41
+2308.50
+26
+0.0112
+25.86
+0.02848
+0.00081
+42
+2725.50
+26
+0.0114
+31.07
+-0.90969
+0.82753
+43
+2462.50
+30
+0.012
+29.55
+0.08278
+0.00685
+1st approach:
+Test statistics = Σ𝒁𝒙𝟐 = 1.47
+OR
+2nd approach:
+Σ𝒁𝒙𝟐 = 2.94
+Degrees of freedom = 7-1 = 6
+At 5% level, the critical value = 12.59
+1.47/2.94<12.59 and no evidence to reject null hypothesis
+
+\end{document}

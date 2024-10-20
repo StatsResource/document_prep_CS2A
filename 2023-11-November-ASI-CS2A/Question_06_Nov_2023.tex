@@ -1,0 +1,92 @@
+
+
+Q. 6)
+Claims on a mediclaim policy follow the lognormal distribution with parameters \mu  = 10 and σ = 0.9. 
+The insurer effects an individual excess of loss reinsurance treaty with a retention limit of Rs.15,000.
+\item Calculate the probability that the claim paid by the reinsurer is more than Rs. 5,000.
+(2)
+\item Next year the claim amounts on these policies are expected to increase by 10%. 
+The reinsurer wants to change the retention limit so that the probability that a claim involves the reinsurer is 5% higher than the previous arrangement. 
+Calculate the new retention limit.
+(4)
+\item With the new retention limit in (\item, calculate the reinsurer’s expected claim payment per claim next year .
+(4)
+
+
+
+
+Solution 6:
+\item
+Let X denote the individual claim amount random variable. Then X ˜ log N(10, 0.81).
+The claim amount paid by the reinsurer exceeds Rs.5000 if X > 20,000
+Using the CDF of the lognormal distribution we have:
+P(X> 20,000) = \int 𝑓(𝑥)𝑑𝑥\infty20000 , where f(x) is p.d.f of log N(10, 0.81)
+= \Phi(U0) - \Phi(L0)
+U0 = \infty, L0 = (ln(20000)-10)/0.9 = -0.10724
+So, the required probability is equal to
+= \Phi(\infty) - \Phi(-0.10724) = 1- 0.457299 =0.542701
+
+\item
+In the previous arrangement, i.e. with the old retention limit (Rs.15,000), the probability the a claim involves the reinsurer
+P(X> 15000) = \int 𝑓(𝑥)𝑑𝑥\infty15000 = \Phi(\infty) - \Phi(L’0)
+L’0 = (In(15000)-10)/.9 = -0.42688
+Probability that a claim involves the reinsurer (with the old retention limit)
+= 1- \Phi(-0.42688)
+= 1-0.334732 = 0.665268
+Next year claims are expected to increase by 10%.
+Let Z be the new retention limit. The claim amount random variable for next year is 1.1X
+So, the probability that a claim involves the reinsurer is
+P(1.1X > Z) = P(X> Z/1.1) = \int 𝑓(𝑥)𝑑𝑥\infty𝑍1.1
+= \Phi(\infty) - \Phi(L*0) =1- \Phi(L*0),
+where L*0 = (In(Z/1.1) -10)/ 0.9
+Any one of the two possible interpretations of new probability stated below:
+1st: 0.665268+.05 = 0.715268
+2nd: 0.665268*1.05 = 0.698531
+1st approach:
+The choice of Z is such that probability that a claim involves the reinsurer (with the new retention limit) is increased by 5%.
+So the new probability becomes 0.665268+.05 = 0.715268
+So, 1- \Phi(L*0) = 0.715268
+\Phi(L*0) = 1- 0.715268 = 0.284732
+L*0 = -0.56884
+
+
+L*0 = (In(Z/1.1) -10)/ 0.9
+In(Z/1.1) = 10+0.9* (-0.56884) = 9.48804
+Z/1.1 = exp(9.48804) = 13200.95
+So, the new retention limit is equal to Z =13200.95*1.1 =14521.04
+Or
+2nd approach
+The choice of Z is such that probability that a claim involves the reinsurer (with the new retention limit) is increased by 5%.
+So the new probability becomes 0.665268*1.05 = 0.698531
+So, 1- \Phi(L*0) = 0.698531
+\Phi(L*0) = 1- 0.698531= 0.301469
+L*0 = -0.52018
+L*0 = (In(Z/1.1) -10)/ 0.9
+In(Z/1.1) = 10+0.9* (-0.52018) = 9.531837
+Z/1.1 = exp(9.48804) = 13791.9
+So, the new retention limit is equal to Z =13200.95*1.1 =15171.09
+
+\item
+Let Z’ denote the reinsurer’s claim payment random variable next year. Then:
+Z’ = 0 if 1.1X<= 14521.04 ( ie X<= 14521.04/1.1)
+= 1.1X- 14521.04 if 1.1X > 14521.04 (ie. X> 14521.04/1.1)
+As 14521.04/1.1= 13200.95,
+E(Z’) = \int  (1.1𝑋−14521.04)𝑓(𝑥)𝑑𝑥\infty13200.95
+= 1.1 \int  𝑋𝑓(𝑥)𝑑𝑥\infty13200.95 -14521.04\int  𝑓(𝑥)𝑑𝑥\infty13200.95----------(1)
+\int  𝑋𝑓(𝑥)𝑑𝑥=exp(10+0.5∗0.81)\infty13200.95 * (\Phi(\infty) - \Phi(L1))
+L1 = (In(13200.95) -10)/0.9- 0.9
+= -1.46884
+\int  𝑋𝑓(𝑥)𝑑𝑥=exp(10+0.5∗0.81)\infty13200.95∗( 1− \Phi(-1.46884))
+= 33024.64*(1- 0.070938)
+= 30681.65
+\int  𝑓(𝑥)𝑑𝑥\infty13200.95= \Phi(\infty) − \Phi(L0)
+
+Page 13 of 17
+L0 = (In(13200.95) -10)/.9= -0.56884
+\int  𝑓(𝑥)𝑑𝑥\infty13200.95= 1 − \Phi(−0.56884) = 1-0.284732 = 0.715268
+Substituting in (1),
+Reinsurer’s expected claim payment next year is equal to
+= 1.1* 30681.65 – 14521.04* 0.715268
+= Rs. 23363.38
+
+[10 Marks]

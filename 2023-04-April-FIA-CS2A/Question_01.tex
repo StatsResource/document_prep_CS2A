@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% CS2A A2023–2
+\large 
+\noindent A process, $X_{t}$, is created as follows. $n$ black balls and $n$ white balls are initially placed in two separate boxes, A and B, in such a way that each box contains $n$ balls. 
+
+An
+experiment is performed in which a ball is selected at random from each box at time t,
+($t = 1, 2, \ldots$), and the two selected balls interchanged. Let ���� be the number of white
+balls in box A just after time $t$.
+
+\begin{enumerate}[(a)]
+\item   Explain whether $X_{t}$ is irreducible. 
+\item   Determine the elements of the transition probability matrix of $X_{t}$. 
+\item Assume that all the $n$ balls that were initially in box A were the white balls and all the
+$n$ balls that were initially in box B were the black balls.
+ Determine the probability that $X_{n} = 0$, simplifying your answer where possible.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\subsection*{Part (a)}
+\begin{itemize}
+\item  
+The chain is irreducible because every state can be reached from any other state 
+\end{itemize}
+
+%%----------------------------------------------%%
+
+\subsection*{Part (b)}
+\item  
+We are interested in:
+If , 
+If , 
+For
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+
+
+% (Candidates do not need to use the i, j notation - other formats are acceptable including an explanation of where there are zero entries without listing them all)
+
+
+\begin{itemize}
+\item Starting with all the white balls in A, getting will require that a white ball is
+drawn from A and a black ball from B for each 
+\item Thus, the probability
+
+\end{itemize}
+
+
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In fact, as a proportion of the marks available, the average mark was lowest for the whole paper. 
+% This is a surprise as the question does not require specialist technical knowledge, but rather basic knowledge of transition probabilities and a careful approach to problem-solving. This question is an excellent example of the comment at the beginning of this report about preparation for open-book examinations.

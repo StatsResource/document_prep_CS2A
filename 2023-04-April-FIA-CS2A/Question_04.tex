@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\documentclass[a4paper,12pt]{article}
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+\usepackage{vmargin}
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+4 A Markov jump process model is used to describe the recovery of people bitten by a
+certain type of poisonous snake. There are three states:
+ Sick and receiving medical care following the snake bite
+ Fully recovered
+ Recovered but with long-term health effects from the bite.
+\item   Explain why a time in-homogeneous Markov jump process model is more
+suitable than a simpler time homogeneous multi-state model in this scenario.
+
+The transition rates from the sick state in this model t days after being bitten by the
+snake are:
+e-2.5t for the transition to fully recovered and
+0.05 − e-2.5t for the transition to recovered but with long-term health effects.
+\item   Comment on the key features of this model including the transition rates. 
+\item  Determine the probability that a person just bitten by a snake will eventually
+make a full recovery without any long-term health effects. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solutions}
+
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+
+
+Q4 \item  
+Allows path to recovery to vary with time since snake bite \item 
+Constant transition intensities would seem inappropriate here \item 
+\item   Transition rate to full recovery falls with duration \item 
+Given -2.5 parameter probability of full recovery quickly becomes negligible \item 
+Transition rate to recovery with long term effects increases with duration \item 
+It seems reasonable that as the duration of sickness increases, the probability of
+recovery without long-term health effects decreases and the probability of recovery
+with long-term health effects increases \item 
+As t increases this transition rates trends to 0.05 \item 
+There is no upper limit to the time taken to recover in this model \item 
+There is no death state \item 
+The transition rate can go negative at some durations which is unrealistic \item 
+Other reasonable observations \item 
+[Marks available 5½, maximum 3]
+\item  Pr (person bitten eventually fully recovered)
+= integral(0,) Pr(remains sick from 0 to t)
+* (transition rate to fully recovered at t) dt 
+Pr(remains sick from 0 to t) = exp(-integral(0,t)(exp(-2.5u) + 0.05 - exp(-2.5u))du) = exp(-0.05t) 
+so integral becomes:
+= integral(0,∞) exp(-0.05t) exp(-2.5t) dt = integral(0,∞) exp-(2.55t) dt 
+= [-exp-(2.55t) / 2.55]:(0,∞) 
+= 1 / 2.55 = 0.392 
+%-------------------------%
+\medskip 
+(Full credit should be awarded to candidates who give the correct numeric answer and show some working but not necessarily all of the steps above)
+[Total 10]
+This is a straightforward Markov jump process question that was reasonably well answered.
+In part \item   a wide range of suitable comments attracted credit. This (somewhat akin to question 3 above) is an example of the need to show understanding of mathematical concepts by applying them to the scenario given in the question. Being successful in this is one of the key differences between candidates who passed and those who did not. Once again, taking a closed-book rather than open-book approach would pay dividends here as the necessary step of applying knowledge to the scenario is unlikely to be found in resources consulted during an examination.
+

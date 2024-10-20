@@ -1,0 +1,79 @@
+Q. 5) \item Define an ARCH model and explain what particular properties of the model would
+make it appropriate for modelling a time series asset.
+
+Consider the time series
+𝑌􀯧=0.1 +0.4Yt-1 +0.9et-1 +et
+Where et is white noise process with variance σ2
+\item Identify the model as an ARIMA(p,d,q) Process (1)
+\item Determine whether 𝑌􀯧 is
+a) A stationary process
+(1)
+IAI CS2A-0921
+Page 6 of 8
+b) An invertible process (1)
+\item Calculate E(𝑌􀯧 ) and find auto co-variance function for 𝑌􀯧 
+\item Determine that MA(∞) representation for 𝑌􀯧 
+[17]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Solution 5:
+i)
+An ARCH(p) model is 𝑋𝑡=𝜇+𝑒𝑡√𝛼0+Σ𝛼𝑘(𝑋𝑡−𝑘−𝜇)2𝑝𝑘=1
+Where et are independent (0,1)
+2 Marks for writing the equation correctly and explaining the terms
+For an asset with price Zt above model is used to to model Ln(Zt/Zt-1 )
+ It can be seen that a large departure in Xt-k from μ will result in Xt having a larger variance. This will then result in a large volatility for the asset price.
+ This behaviour is observed in actual practice as the volatility of the price of a particular asset is much higher following a significant change in the price of the asset.
+ Therefore ARCH model is more appropriate to model such asset class.
+(4)
+Consider the time series
+𝑌𝑡=0.1 +0.4Yt-1 +0.9et-1 +et
+Where et is white noise process with variance σ2
+ii)
+The model is ARIMA(1,0,1) if Yt is stationary
+(1)
+(ii)
+iii)
+a) The characteristic polynomial for the AR part is A(z) = 1 − 0.4z the root of which has absolute value greater than 1 so the process is stationary.
+b) The characteristic polynomial for the MA part is B(z) = 1 + 0.9z the root of which has absolute value greater than 1 so the process is invertible.
+(1)
+(1)
+(iii)
+iv)
+Since the process is stationary we know that E(Yt ) is equal to some constant μ independent of t.
+Taking expectations on both sides of the equation defining Yt gives
+E(Yt ) = 0.1 + 0.4E(Yt−1)
+μ = 0.1 +0.4μ
+μ = 0.1/( 1 0.4) = 0.1666666
+Note that
+Cov(Yt , et ) = Cov(0.1 + 0.4Yt-1 + 0.9et-1 + et , et )
+=0.4Cov(Yt-1, et ) + 0.9Cov(et-1, et ) + Cov(et , et ) = 0 + 0 + σ2 = σ2
+Similarly
+IAI CS2A-0921
+Page 5 of 8
+Cov(Yt ,et-1) =0 + 0.4Cov(Yt-1, et-1) + 0.9Cov(et-1, et-1) + Cov(et ,et-1) = 0.4σ2 + 0.9σ2 + 0 = 1.3σ2
+So
+γ0 = Cov(Yt , Yt ) = Cov(Yt , 0.1 + 0.4Yt-1 + 0.9et-1 + et )
+= 0.4γ1 + 0.9 × 1.3σ2 + σ2 = 0.4γ1 + 2.17σ2 -----------------(1)
+And
+γ1 = Cov(Yt-1, Yt ) = Cov(Yt-1, 0.1 + 0.4Yt-1 + 0.9et-1 + et )
+= 0.4γ0 + 0.9σ2---------------------------------------------------------------------- (2)
+Substituting for γ1 in (1) gives
+γ0 = 0.4 × 0.4γ0 + 0.4 × 0.9σ2 + 2.17σ2 = 0.16γ0 + 2.53σ2
+γ0 = (2.53 /0.84 )σt62 = 3.011905σ2
+Substituting into (2) gives
+γ1 = 0.4 × 3.011905σ2 + 0.9σ2 = 2.104762σ2
+And in general
+γs = 0.4γs−1 for s ≥ 2
+So γs = 0.4s-1 × 2.104762 σ2.
+(6)
+(iv)
+v)
+We have (1−0.4𝐵)𝑌𝑡=0.1+0.9𝑒𝑡−1+𝑒𝑡
+Hence 𝑌𝑡= (1−0.4𝐵)−1(0.1+0.9𝑒𝑡−1+𝑒𝑡) = Σ0.4𝑖𝐵𝑖∞𝑖=0(0.1+0.9𝑒𝑡−1+𝑒𝑡)
+=0.11−0.4+0.9Σ0.4𝑖𝑒𝑡−𝑖−1+Σ0.4𝑖𝑒𝑡−𝑖∞𝑖=0∞𝑖=0 =0.16667+𝑒𝑡+1.3Σ0.4𝑖−1𝑒𝑡−𝑖∞𝑖=1
+(4)
+[17 Marks]
+
